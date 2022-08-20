@@ -1,0 +1,325 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <!-- Latest compiled and minified CSS -->
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/css/bootstrap.min.css">
+
+<!-- jQuery library -->
+<script src="https://cdn.jsdelivr.net/npm/jquery@3.6.0/dist/jquery.slim.min.js"></script>
+
+<!-- Popper JS -->
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"></script>
+
+<!-- Latest compiled JavaScript -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/js/bootstrap.bundle.min.js"></script>
+
+<link rel="stylesheet" href="css/Chess.css">
+</head>
+<body>
+    
+    <div class="container">
+        <nav class="navbar navbar-expand-md navbar-dark bg-dark fixed-top" >
+            <a href="" class="navbar-brand " id="logo">
+                <img src="data:image/png;base64,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">
+            </a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarresponsive">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarresponsive">
+                <ul class="navbar-nav ml-auto">
+                    <li class="nav-item">
+                        <a href="SportsInfo.html" class="nav-link">Home</a>
+                    </li>
+                    <li class="dropdown text-white">
+                        <a href="" class="nav-link dropdown-toggle" role="button"data-toggle="dropdown">Sports</a>
+                        <div class="dropdown-menu bg-dark">
+                            <a href="swimmingdetails.html" class="dropdown-item">Swimming</a>
+                        <a href="sportsdetails1.html" class="dropdown-item">Cricket</a>
+                        <a href="golf.html" class="dropdown-item">Golf</a>
+                        <a href="volleyball.html" class="dropdown-item">Volley Ball</a>
+                        <a href="footballdetails.html" class="dropdown-item">Foot Ball</a>
+                        <a href="tennisdetails.html" class="dropdown-item">Tennis</a>
+                        <a href="judo.html" class="dropdown-item">Judo</a>
+                        <a href="Chess.html" class="dropdown-item">Chess</a>
+                        <a href="badminton.html" class="dropdown-item">Badminton</a>
+                        <a href="billiardsdetails.html" class="dropdown-item">Billards</a>
+                        <a href="motorcycledetails.html" class="dropdown-item">Motor Cycle Racing</a>
+                        </div>
+                    </li>
+                    <li class="nav-item">
+                        <a href="#footer" class="nav-link">About Us</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="ContactUs.html" class="nav-link">Contact Us</a>
+                    </li>
+                    <!-- <li class="nav-item">
+                        <a href="" class="nav-link">Log in</a>
+                    </li> -->
+                </ul>
+            </div>
+        </nav>
+    </div>
+    <div class="container text-white" id="content">
+        <div class="row">
+            <div class="col-md-7 col-sm-12">
+                <h1>Chess</h1>
+                <p>Chess is a board game for two players. It is played on a square board, made up of 64 smaller squares, with eight squares in each row and column. Each player starts with sixteen pieces: eight pawns, two knights, two bishops, two rooks, one queen and one king The goal of the game is for each player to try and checkmate the king of the opponent. Checkmate is a threat ('check') to the opposing king which no move can stop. It ends the game.</p>
+                <p>During the game, the two opponents take turns to move one of their pieces to a different square of the board. One player ('White') has pieces of a light color; the other player ('Black') has pieces of a dark color. There are rules about how pieces move, and about taking the opponent's pieces off the board. The player with white pieces always makes the first move. Because of this, White has a small advantage, and wins more often than Black in tournament games.</p>
+                <p>Chess is popular and is often played in competitions called chess tournaments. It is enjoyed in many countries, and is a national hobby in Russia.</p> 
+            </div>
+            <div class="col-md-5 col-sm-12">
+                <img src="Img/chess/chess.jpg" alt="" class="img-fluid w-100 h-100">
+            </div>
+        </div>
+                  
+    </div>
+    <hr>
+    <div class="container text-white" id="content2">
+        <h3>History</h3>
+        <p>Most historians agree that the game of chess was first played in northern India during the Gupta Empire in the 6th century AD. This early type of chess was known as Chaturanga, a Sanskrit word for the military. The Gupta chess pieces were divided, like their military, into the infantry, cavalry, elephants, and chariots. Over time, these pieces became the pawn, knight, bishop, and rook. The English words chess and check both come from the Persian word shāh meaning king.</p>
+        <p>
+        The earliest written evidence of chess is found in three romances (epic stories) written in Sassanid Persia around 600AD. The game was known as chatrang or shatranj. When Persia was taken over by Muslims (633–644) the game spread to all parts of the Muslim world. Muslim traders carried the game to Russia and Western Europe. By the year 1000, it had spread all across Europe. In the 13th century, a Spanish manuscript called Libro de los Juegos described the games of shatranj (chess), backgammon, and dice.
+        </p>
+        <p>    
+        The game changed greatly between about 1470 to 1495. The rules of the older game were changed in the West so that some pieces (queen, bishop) had more scope, piece development was faster, and the game was more exciting. The new game formed the basis of modern international chess. Chess historians consider this to be the most important change since the game's invention.</p>
+    </div>
+</div>
+<hr>
+<div class="container" id="content2">
+    <div class="row">
+        <div class="col-md-6 col-sm-12">
+            <h3>Rules</h3>
+            <p>The rules of chess are governed by the World Chess Federation, which is known by the initials FIDE, meaning Fédération Internationale des Échecs. The rules are in the section Laws of Chess of the FIDE Handbook. FIDE also give rules and guidelines for chess tournaments.
+           <h4>Setup</h4>
+            <p>Chess is played on a square board divided into eight rows of squares called ranks and eight columns called files, with a dark square in each player's lower left corner. There are 64 squares on a chess board. The colors of the squares are laid out in a checker (chequer) pattern with light and dark squares. To make speaking and writing about chess easy, each square has a name. Rank are numbered from 1 to 8, and each file is lettered from a to h. The letter assigned to a file comes before the number assigned to a rank in chess notation. Every square on the board has its own label, such as g1 or f5. The pieces are in white and black sets. The players are called White and Black, and at the start of a game each player has 16 pieces. The 16 pieces are one king, one queen, two rooks, two bishops, two knights and eight pawns.</p>
+            </div>
+            <div class="col-md-6 col-sm-12">
+                <img src="Img/chess/rules.jpg" alt="" class="imgifluid w-100 h-100">
+            </div>
+            
+        </div>
+    </div>
+    <div class="container" id="content2">
+        <div class="row">
+            <div class="col-md-12 col-sm-12">
+                <h4>Movement</h4>
+                <p>Definitions: vertical lines are files; horizontal lines are ranks; lines at 45° are diagonals. Each piece has its own way of moving around the board. The X marks the squares where the piece can move.
+                <ul>
+                    <li>The knight is the only piece that can jump over another piece.</li>
+                    <li>No piece may move to a square occupied by a piece of the same color.
+                    </li>
+                    <li>All pieces capture the same way they move, except pawns.</li>
+                    <li>The king (K for short) can move one square in any direction. The king may not move to any square where it is threatened by an opposing piece. However, the king can move to a square that is occupied by an opponent's piece and capture the piece, taking it off the board.</li>
+                    <li>The queen (Q) can move any distance in any direction on the ranks, files and diagonals.
+                    </li>
+                    <li>The rooks (R) move any distance on the ranks or files.
+                    </li>
+                    <li>The bishops (B) move diagonally on the board. Since a bishop can only move diagonally, it will always be on the same color square.</li>
+                    <li>The knights (Kt or N) move in an "L" shape. Each move must be either two squares along a rank and one square along a file, or two squares along a file and one square along a rank. It is the only piece that can jump over other pieces. Like the other pieces, it captures an opposing piece by landing on its square.</li>
+                    <li>The pawns can only move up the board. On its first move a pawn may move either one or two squares forward. A pawn captures one square diagonally, not as it moves: see white circles on its diagram. In some situations, pawns can capture opponent's pawns in a special way called en passant, which means in passing in French (see below).</li>
+                </ul>
+                </p>
+                <h4>Capturing</h4>
+                <p>Most pieces capture as they move. If a piece lands on an opponent's piece, the opposing piece is taken off the board. There are three special cases:
+                    <ul>
+                        <li>The king cannot be taken (see check and checkmate).</li>
+                        <li>No piece can be taken while castling (see below).</li>
+                        <li>Pawns take one square diagonally.</li>
+                    </ul>
+                </p>
+            </div>
+        </div>
+    </div>
+    <hr>
+    <center><h1>Top 5 Chess Players In The World.</h1></center>
+    <div class="container">
+        <div class="row">
+            <div class="col-md-8 col-sm-12">
+                
+                <h3>1.Magnus Carlsen</h3>
+                <p>GM Magnus Carlsen is the current world chess champion. To many people, he’s the best to ever play the game, although GMs Garry Kasparov and Bobby Fischer remain in the conversation. At any rate, the clear and remarkable point is that before turning 30 years old, Carlsen has already earned a spot at the top.
+                    <br>
+                    It’s easy to see why. The 13-year-old Norwegian prodigy drew Kasparov and defeated GM Anatoly Karpov at the same event in 2004, one month before he became the second-youngest GM in history (and still eighth-youngest as of 2021). In 2009, he became the youngest player to break the 2800-rating threshold (a record only broken by GM Alireza Firouzja in 2021).
+                    <br>
+            </div>
+            <div class="col-md-4 col-sm-12">
+                <img src="Img/chess/1rank.jpg" alt="" class="imgfluid w-100 h-100">
+            </div>
+        </div>
+    </div>
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12 col-sm-12">
+                <p>Then Carlsen transitioned from young world-class player to all-time great. He captured the world number-one ranking in 2011 and still hasn’t let go of it. He won the world title in 2013 and has successfully defended it four times (2014, 2016, 2018, and 2021). Additionally, he has won multiple world titles in rapid (twice) and blitz (four times) time controls, achieved the highest rating ever, and racked up several elite tournament wins, including four Norway Chess victories and seven in Wijk aan Zee.</p>
+                <p>The amazing part is it seems like there’s much more ahead for Carlsen. In October 2020 Carlsen's 125-game undefeated streak came to an end (he scored 42 wins and 83 draws during this streak), setting yet another world record. If he continues performing the way he has, Carlsen could create something truly legendary. In an era of chess that’s more competitive than ever, he’s far ahead of the opposition.</p>
+            </div>
+            
+        </div>
+    </div>
+<br>
+    <div class="container">
+        <div class="row">
+            <div class="col-md-8 col-sm-12">
+                
+                <h3>2. Ding Liren</h3>
+                <p>Ding Liren is a Chinese super grandmaster who many people consider to be a primary contender for Magnus Carlsen’s world title. Ding won his first Chinese Chess Championship at the age of 16, making him the youngest to ever do so. In the 2017 and 2019 Chess World Cup, he became the first player in history to reach the finals twice in a row. The latter result means that Ding would play in the 2020 Candidates Tournament, which decided who gets a shot at the world title.
+                </p> 
+                <p>A few years before turning 30, Ding has already amassed an impressive chess resume. His three Chinese titles are joined by two team gold medals and one individual gold medal at the Chess Olympiads (plus one team gold medal at the World Team Championships).</p>
+            </div>
+            <div class="col-md-4 col-sm-12">
+                <img src="Img/chess/2rank.jpg" alt="" class="imgfluid w-100 h-100">
+            </div>
+        </div>
+    </div>
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12 col-sm-12">
+                <p>From August 2017 to November 2018, Ding held a 100-game unbeaten streak in top-level chess competition—the longest in history until Carlsen broke it in October 2019. In 2018, Ding entered the world’s top-five chess players (May) and broke the 2800-rating mark (September), and he remains in those categories today.</p>
+                <p>One of Ding’s crowning achievements so far is his peak rating, one of the highest in history. His 2816 in November 2018 matches Veselin Topalov and Hikaru Nakamura for the tenth-best rating of all time.</p>
+            </div>
+            
+        </div>
+    </div>
+    <br>
+    <div class="container">
+        <div class="row">
+            <div class="col-md-8 col-sm-12">
+                
+                <h3>3. Ian Nepomniachtchi</h3>
+                <p>GM Ian Nepomniachtchi (“Nepo” for short) is a Russian super grandmaster who won the 2020-21 Candidates Tournament and challenged GM Magnus Carlsen for the 2021 World Championship.
+                </p> 
+                <p>Nepomniachtchi has a terrific overall record against world champions. At standard time controls, he has positive scores against GM Vladimir Kramnik (+5 -4 =4), GM Viswanathan Anand (+3 -2 =5), and even had a winning record against Carlsen (+4 -1 =6, with two wins coming during their youth careers) before their 2021 match. Nepomniachtchi also has positive records against GM Anatoly Karpov (+2 -0 =0 in 2013) and GM Garry Kasparov (+2 -0 =3 from 2017-21) in rapid/blitz, the only formats he has played them in.</p>
+            </div>
+            <div class="col-md-4 col-sm-12">
+                <img src="Img/chess/3rank.jpg" alt="" class="imgfluid w-100 h-100">
+            </div>
+        </div>
+    </div>
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12 col-sm-12">
+                <p>In the opening, Nepomniachtchi almost always begins with 1.e4 as White with some English (1.c4). As Black, he typically plays the Sicilian with an occasional French against 1.e4, and the Grunfeld is his main weapon against 1.d4. In the 2021 World Championship, Nepomniachtchi changed his openings with Black, responding to 1.e4 with 1...e5 instead of 1...c5.</p>
+                <p>In the 2021 World Championship against Carlsen, Nepomniachtchi made five consecutive draws to begin the match before dropping a very closely contested sixth game, which was the longest in world championship history at 136 moves. The match got away from Nepomniachtchi at that point, ending 7.5-3.5 in Carlsen's favor.
+
+                    Nepomniachtchi will have another chance to qualify for a championship match with Carlsen, thanks to an automatic bid into the 2022 Candidates.</p>
+            </div>
+            
+        </div>
+    </div>
+    <br>
+    <div class="container">
+        <div class="row">
+            <div class="col-md-8 col-sm-12">
+                
+                <h3>4. Fabiano Caruana</h3>
+                <p>The prodigy who broke the record held by GM Hikaru Nakamura for America's youngest chess grandmaster, Fabiano Caruana, has climbed the mountain of chess and reached the summit. This grandmaster has had a ranking as high as number-two in the world and has won numerous tournaments in his career. In 2018 the American faced GM Magnus Carlsen at the World Chess Championship in London in 2018, losing in the tiebreak playoffs.</p> 
+                <p>In 2012 Caruana continued to improve. After a second-place tie in the A section of the Tata Steel Tournament, Caruana went on a streak, winning first in the Reykjavik Open, Sigeman and Co. Chess Tournament, and the Dortmund Sparkassen Chess Meeting. In the same year, Caruana also finished second in both the Tal Memorial and the Grand Slam Chess Final. By January 2013, Caruana was ranked fifth in the world rankings with a rating of 2781.
+
+                    Caruana spent much of 2013 trying to qualify for the 2014 Candidates tournament through the FIDE Grand Prix. After placing third in Zug, second in Thessaloniki, and winning the circuit in Paris, Caruana had amassed 380 points, narrowly missing an automatic qualification to the Candidates.
+                    
+                    In 2014 Caruana finished second in both Shamkir Chess and Norway Chess, behind Carlsen in each event.</p>
+            </div>
+            <div class="col-md-4 col-sm-12">
+                <img src="Img/chess/4rank.jpg" alt="" class="imgfluid w-100 h-100">
+            </div>
+        </div>
+    </div>
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12 col-sm-12">
+                <p>Caruana won a silver medal in the World Rapid Championships in Dubai, just a half-point behind first place. He then represented Italy on the first board once again at the 2014 Olympiad in Tromso, Norway.
+
+                    Upon the conclusion of the Olympiad, Caruana then returned to the United States, where he won the Sinquefield Cup with his memorable seven-game winning streak.</p>
+                <p>With a performance rating of 3080, Caruana arguably had the best tournament performance in chess history, beating Nakamura, Levon Aronian, Maxime Vachier-Lagrave, Veselin Topalov, and most notably, World Champion Carlsen. Each player in the double round-robin was ranked in the world top-ten prior to the tournament, and the 8.5/10 final result saw Caruana's rating reach 2844, his personal best rating. At the conclusion of the event, Caruana was the second-highest rated player in the world.</p>
+            </div>
+            
+        </div>
+    </div>
+    <br>
+    <div class="container">
+        <div class="row">
+            <div class="col-md-8 col-sm-12">
+                
+                <h3>5. Levon Aronian</h3>
+                <p>Levon Aronian is an Armenian-American super grandmaster who has long been among the world’s best players. He first entered the top 20 in 2005 and still hasn’t lost that distinction. Most of those 15 years or so have been spent in the top 10. In 2021, he switched federations from Armenia to the U.S.</p> 
+                <p>Aronian has been a model for steady, elite-level chess play in recent years, but don’t let his consistency overshadow what he has accomplished so far. In the first half of the 2010s—November 2010 to September 2014—he was in the top three. In March 2014, his rating peaked at 2830. That made Aronian the fourth-highest rated player in history—only Magnus Carlsen, Garry Kasparov and Fabiano Caruana have achieved higher ratings.
+
+                    Aronian’s resume also includes world championships in Fischer random chess, blitz and rapid; multiple gold team medals for the Armenian national team; an individual Armenian national title; two Chess World Cup victories and much more. The Armenian hero is a few years away from turning 40, which means that he could add quite a bit more to a legacy that has enriched the game.</p>
+            </div>
+            <div class="col-md-4 col-sm-12">
+                <img src="Img/chess/2rank.jpeg" alt="" class="imgfluid w-100 h-100">
+            </div>
+        </div>
+    </div>
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12 col-sm-12">
+                <p>One year after narrowly missing first place at the World Junior Championship and the Armenian Chess Championship, Aronian won both titles.
+
+                    He took first place at the 2002 World Junior Championship ahead of future grandmasters such as Bu Xiangzhi, Pentala Harikrishna and Luke McShane. He also took the 2002 Armenian Chess Championship, granting the 20-year-old grandmaster two prestigious tournament victories in the same year.
+                    
+                    Over the next few years, Aronian put together several notable performances. From 2003 to 2005, he strung together three top-four finishes in the annual European Individual Chess Championships. In 2004 he defeated Carlsen in the first round of the FIDE World Chess Championship before losing in the third round. In 2005 Aronian won the Karabakh International Tournament. His 6/9 points put him ahead of eight-time Armenian Chess Champion Ashot Anastasian (who finished second) as well as notable players such as Hikaru Nakamura and Vassily Ivanchuck.</p>
+                <p>A tournament at the end of the year may have represented his biggest accomplishment to date. Then Aronian won the Chess World Cup 2005 without losing a single game. He defeated Vallejo, Mikhail Gurevich, Bacrot and Ponomariov in the latter part of the 128-player tournament. The top-10 finishers qualified for the 2007 Candidates’ Tournament, which began with two rounds of matches before the World Chess Championship 2007. Aronian beat Carlsen in the first round and beat Alexei Shirov in the second round to qualify for the world championship tournament, where he placed seventh out of eight players.
+
+                    The next year, 2006, Aronian won the elite Linares International Chess Tournament. His 8.5/13 points was half a point ahead of Teimour Radjabov and the then FIDE World Chess Champion, Veselin Topalov. Aronian finished the tournament with a performance rating of 2808. He tied for first place  with Peter Leko and Ponomariov at the inaugural Tal Memorial in 2006. At the 37th Chess Olympiad in the same year, Aronian led Armenia to its first-ever gold medal at the event.</p>
+            </div>
+            
+        </div>
+    </div>
+    <br>
+    <br>
+    <br>
+    <center><h5>There is always more to know, We will update more Information about Chess. Stay tuned with Us. Thanks</h5></center>
+<br>
+<br>
+<br>
+    <!-- Footer -->
+<div class="Container-fluid text-white" id="footer">
+    
+    <div class="row" id="footer-row">
+        <div class="col-md-4 col-sm-12 logo mt-3 mb-2 text-center">
+           <a href=""><img src="data:image/png;base64,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"></a>
+           <h1>Sports.Info</h1>
+           <h6>Information you need <br>Knowledge we have</h6>
+        </div>
+        <div class="col-md-2 col-sm-6 mb-2 mt-3 ml-3" id="visit">
+            <h3>Visit</h3>
+            <a href="#Home"><h5>Home</h5></a>
+            <a href="#Content"><h5>Sports</h5></a>
+            <a href="#about"><h5>About Us</h5></a>
+            <a href="ContactUs.html"><h5>ContactUs</h5></a>
+        </div>
+        <div class="col-md-2 col-sm-6 mb-2 mt-3 ml-3">
+            <h3>Follow Us</h3>
+            <h5>Facebook</h5>
+            <h5>Twitter</h5>
+            <h5>Youtube</h5>
+
+        </div>
+        <div class="col-md-3 col-sm-6 mb-2 mt-3 ml-3">
+            <h3>Contact</h3>
+            <h5>+923 123456789</h5>
+            <h3>Address</h3>
+            <h5>Karachi Pakistan</h5>
+            <h3>Mail Address</h3>
+            <h5>abc@gmail.com</h5>
+        </div>
+    </div>
+
+</div>
+<div class="Container-fluid text-center text-white" id="copyright">
+<div class="container" id="cpyrght">
+    <div class="row">
+        <div class="col-md-12 col-sm-12">
+            <h5>&copy; CopyRight Reserved 2022</h5>
+        </div>
+    </div>
+</div>
+</div>
+<!-- Footer -->
+</body>
+</html>

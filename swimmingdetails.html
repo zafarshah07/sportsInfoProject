@@ -1,0 +1,340 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>Page Title</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1, shrink-to-fit=no'>
+    <link rel='stylesheet' type='text/css' media='screen' href='main.css'>
+    <script src='main.js'></script>
+    <!-- Latest compiled and minified CSS -->
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/css/bootstrap.min.css">
+
+<!-- jQuery library -->
+<script src="https://cdn.jsdelivr.net/npm/jquery@3.6.0/dist/jquery.slim.min.js"></script>
+
+<!-- Popper JS -->
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"></script>
+
+<!-- Latest compiled JavaScript -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/js/bootstrap.bundle.min.js"></script>
+<link rel="stylesheet" href="css/swimmingdetails.css">
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+
+
+
+</head>
+<body class="bg-white">
+    <div class="container" id="Home">
+        <nav class="navbar navbar-expand-md navbar-dark bg-dark fixed-top" >
+           <a href="" class="navbar-brand " id="logo">
+               <img src="data:image/png;base64,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">
+           </a>
+           <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarresponsive">
+               <span class="navbar-toggler-icon"></span>
+           </button>
+           <div class="collapse navbar-collapse" id="navbarresponsive">
+               <ul class="navbar-nav ml-auto">
+                   <li class="nav-item">
+                    <a href="SportsInfo.html" class="nav-link">Home</a>
+                   </li>
+                   <li class="dropdown text-white">
+                       <a href="" class="nav-link dropdown-toggle" role="button"data-toggle="dropdown">Sports</a>
+                       <div class="dropdown-menu bg-dark">
+                           <a href="swimmingdetails.html" class="dropdown-item">Swimming</a>
+                           <a href="sportsdetails1.html" class="dropdown-item">Cricket</a>
+                           <a href="golf.html" class="dropdown-item">Golf</a>
+                           <a href="volleyball.html" class="dropdown-item">Volley Ball</a>
+                           <a href="footballdetails.html" class="dropdown-item">Foot Ball</a>
+                           <a href="tennisdetails.html" class="dropdown-item">Tennis</a>
+                           <a href="judo.html" class="dropdown-item">Judo</a>
+                           <a href="Chess.html" class="dropdown-item">Chess</a>
+                           <a href="badminton.html" class="dropdown-item">Badminton</a>
+                           <a href="billiardsdetails.html" class="dropdown-item">Billards</a>
+                           <a href="motorcycledetails.html" class="dropdown-item">Motor Cycle Racing</a>
+                       </div>
+                   </li>
+                   <li class="nav-item">
+                       <a href="#about" class="nav-link">About Us</a>
+                   </li>
+                   <li class="nav-item">
+                       <a href="contactus.html" class="nav-link">Contact Us</a>
+                   </li>
+                   <!-- <li class="nav-item">
+                       <a href="" class="nav-link">Log in</a>
+                   </li> -->
+               </ul>
+           </div>
+        </nav>
+        <div>
+    <!-- header  -->
+
+    <div class="container-fluid text-center">
+        
+    </div>
+
+
+
+
+
+    <!-- content details  -->
+
+    <div class="container-fluid bgImage text-center">
+        <div class="container" style="background-color: transparent;">
+            <img src="data:image/png;base64,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">
+        </div>
+
+        
+
+        <div class="container my-4">
+            <p style="font-weight: 500;">Swimming is an individual or team racing sport that requires the use of one's entire body to move through water. The sport takes place in pools or open water.</p>
+        </div>
+
+        <!-- img start -->
+
+        <div class="container">
+            <img src="../js/images/swimmingbanner.jpg" class="mx-auto d-block" style="width:90%"> 
+        </div>
+       
+        <!-- img end  -->
+
+    </div>
+    <div class="container-fluid"><hr style="margin-top:-50px; height: 100px;"></div>
+
+    <div class="container my-4 mt-1 text-center" style="margin-top:-100px;">
+        <p style="font-weight:500 ;">Best Olympics Swimmers</p>
+    </div>
+
+    <!-- cards start  -->
+
+    <div class="container text-center  d-flex" id="cards">
+        <div class="container-fluid row">
+        <div class="card border-0 bg-transparent col-md-4" style="width:400px">
+            <a href="#" data-toggle="popover" title="Popover Header" data-content="Some content inside the popover"><img class="card-img-top" src="../js/images/adam.jpg" alt="Card image" style="width:100%"></a>
+          <div class="card-body">
+            <h4 class="card-title">Adam Peaty</h4>
+            <p class="card-text"></p>
+            <a href="#" class="btn btn-danger stretched-link">See Profile</a>
+          </div>
+        </div>
+
+        <h2></h2>
+        <p></p>
+        <div class="card border-0 bg-transparent col-md-4" style="width:400px">
+          <img class="card-img-top" src="../js/images/phelps.webp" alt="Card image" style="width:100%">
+          <div class="card-body">
+            <h4 class="card-title">Michael Phelps</h4>
+            <p class="card-text"></p>
+            <a href="#" class="btn btn-danger stretched-link">See Profile</a>
+          </div>
+        </div>
+
+        <h2></h2>
+        <p></p>
+        <div class="card border-0 bg-transparent col-md-4" style="width:400px">
+          <img class="card-img-top" src="../js/images/murphy.png" alt="Card image" style="width:85%">
+          <div class="card-body">
+            <h4 class="card-title">Ryan Murphy</h4>
+            <p class="card-text"></p>
+            <a href="#" class="btn btn-danger stretched-link">See Profile</a>
+          </div>
+        </div>
+        </div>
+    </div>
+
+    <!-- cards end -->
+
+    <div class="container-fluid"><hr style="margin-top:40px; height: 100px;"></div>
+
+    <!-- players section start  -->
+
+    <section class="about us">
+        <div class="container">
+            <h1 class="text-center" id="title1">Phelps's Stats</h1>
+            <div class="row">   
+                <div class="col-md-6">
+                    <p class="para1" style="font-weight: 500;"> Michael Fred Phelps II is an American former competitive swimmer. He is the most successful and most decorated Olympian of all time with a total of 28 medals.</p>
+                    <ul>    
+                        <li>Phelps also holds the all-time records for Olympic gold medals, Olympic gold medals in individual events, and Olympic medals in individual events.</li>
+                        <li>Phelps has been said to possess extremely high lung capacity — twice that of the average human, or 12 liters rather than six.</li>
+                        <li> Phelps won the highest number of medals in the entire Olympics - 28 medals across five Summer Games.</li>                       
+                    </ul>
+
+                </div>
+
+                <div class="col-md-6">
+                    <img src="../js/images/phelpsmedals.jpeg" class="img-fluid" alt="" width="500">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    
+
+
+    <section class="about us">
+        <div class="container">
+            <h1 class="text-center" id="title1">Adam's Stats</h1>
+            <div class="row">   
+                <div class="col-md-6">
+
+                    <p class="para1" style="font-weight: 500;">Adam George Peaty, OBE is an English competitive swimmer who specialises in the breaststroke.  </p>
+                    <ul>    
+                        <li> He won the gold medal in the 100 metre breaststroke at the 2016 Summer Olympics</li>
+                        <li>Adam Peaty has been ruled out of the swimming World Championships after fracturing a bone in his foot</li>
+                        <li>Peaty is the holder of the world record in 50 metre and 100 metre breaststroke events, and is unbeaten in either event in a long-course global championships since 2014, a streak of eight consecutive global titles across both events, a streak of titles only broken by injury-caused absence in 2022</li>
+                 
+                    </ul>
+
+                </div>
+
+                <div class="col-md-6">
+                    <img src="../js/images/adammedal.jpg" class="img-fluid" alt="" width="500">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    
+
+
+    <section class="about us">
+        <div class="container">
+            <h1 class="text-center" id="title1">Murphy's Stats</h1>
+            <div class="row">   
+                <div class="col-md-6">
+                    <p class="para1" style="font-weight: 500;"></p>
+                    <ul>    
+                        <li>He is a four-time Olympic gold medalist and the former world-record holder in the men's 100-meter backstroke.  </li>
+                        <li>At the 2016 Summer Olympics, Murphy swept the backstroke events, winning gold medals in both the 100- and 200-meter backstroke races</li>
+                        <li>He also won a gold medal in the 4×100-meter medley relay with Michael Phelps, Nathan Adrian, and Cody Miller, and Murphy's backstroke relay leg broke the world record previously set by Aaron Peirsol in 2009 
+                        </li>
+                       
+                    </ul>
+
+                </div>
+
+                <div class="col-md-6">
+                    <img src="../js/images/murphymedal.webp" class="img-fluid" alt="" width="500">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- players section end  -->
+
+
+    <!-- cricket rules and regulations start -->
+
+
+    <!-- <div class="container my-4 mt-1 text-center">
+        <p>CRICKET IS WIDELY PLAYED IN MANY </p>
+    </div> -->
+
+    <section>
+        <div class="container">
+            <h1 id="title1" class="text-center">Rule and regulations</h1>
+            <div class="row">
+                <div class="col-md-6">
+                    <ul>
+                        <li>Freestyle swimmers may not push off the bottom of the pool.</li>
+                        <li>Freestyle swimmers' bodies must break the water's surface throughout the race.</li>
+                        <li>Freestyle swimmers' heads must break the surface within 15 meters after a turn.</li>
+                        <li>The swimmer must stay in the same lane for the entire duration and all turns must be made using physical contact off of the wall and swimmers cannot touch or push-off the bottom of the pool.</li>
+                        <li>In terms of the actual pool itself, it must be 50 meters in length with eight 2.5 meter wide lanes.</li>
+                    </ul>
+                </div>  
+
+                <div class="col-md-6">
+                    <img src="../js/images/swimmingrules.jfif" class="img-fluid" alt="" width="500">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- cricket rules and regulations end -->
+
+    <!-- video start -->
+
+    <div class="container">
+        <video src="" class="mx-auto d-block"></video> 
+    </div>
+
+    <!-- video end -->
+    
+    
+
+
+    <div class="container-fluid"><hr style="margin-top:150px; height: 100px;"></div>
+
+
+    <!-- pagination  -->
+
+    <div class="container">
+        <ul class="pagination bg-transparent justify-content-center">
+            <li class="page-item"><a class="page-link" href="javascript:void(0);">Previous</a></li>
+            <li class="page-item"><a class="page-link" href="javascript:void(0);">1</a></li>
+            <li class="page-item"><a class="page-link" href="javascript:void(0);">2</a></li>
+            <li class="page-item"><a class="page-link" href="javascript:void(0);">Next</a></li>
+        </ul>
+    </div>
+
+    <!-- icons -->
+    <div class="container footer bg-transparent">
+
+       <div class="container text-center">
+         <a href="#" class="fa fa-facebook"></a>
+         <a href="#" class="fa fa-twitter"></a>
+         <a href="#" class="fa fa-google"></a>
+       </div>
+    </div>
+    <!-- Footer -->
+<div class="Container-fluid text-white" id="footer">
+    
+    <div class="row" id="footer-row">
+        <div class="col-md-4 col-sm-12 logo mt-3 mb-2 text-center">
+           <a href=""><img src="data:image/png;base64,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"></a>
+           <h1>Sports.Info</h1>
+           <h6>Information you need <br>Knowledge we have</h6>
+        </div>
+        <div class="col-md-2 col-sm-6 mb-2 mt-3 ml-3" id="visit">
+            <h3>Visit</h3>
+            <a href="#Home"><h5>Home</h5></a>
+            <a href="#Content"><h5>Sports</h5></a>
+            <a href="#about"><h5>About Us</h5></a>
+            <a href="contactus.html"><h5>ContactUs</h5></a>
+        </div>
+        <div class="col-md-2 col-sm-6 mb-2 mt-3 ml-3">
+            <h3>Follow Us</h3>
+            <h5>Facebook</h5>
+            <h5>Twitter</h5>
+            <h5>Youtube</h5>
+
+        </div>
+        <div class="col-md-3 col-sm-6 mb-2 mt-3 ml-3">
+            <h3>Contact</h3>
+            <h5>+923 123456789</h5>
+            <h3>Address</h3>
+            <h5>Karachi Pakistan</h5>
+            <h3>Mail Address</h3>
+            <h5>abc@gmail.com</h5>
+        </div>
+    </div>
+
+</div>
+<div class="Container-fluid text-center text-white" id="copyright">
+<div class="container" id="cpyrght">
+    <div class="row">
+        <div class="col-md-12 col-sm-12">
+            <h5>&copy; CopyRight Reserved 2022</h5>
+        </div>
+    </div>
+</div>
+</div>
+<!-- Footer -->
+
+  
+</body>
+</html>

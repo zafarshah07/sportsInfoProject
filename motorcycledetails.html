@@ -1,0 +1,343 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>Page Title</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1, shrink-to-fit=no'>
+    <link rel='stylesheet' type='text/css' media='screen' href='main.css'>
+    <script src='main.js'></script>
+    <!-- Latest compiled and minified CSS -->
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/css/bootstrap.min.css">
+
+<!-- jQuery library -->
+<script src="https://cdn.jsdelivr.net/npm/jquery@3.6.0/dist/jquery.slim.min.js"></script>
+
+<!-- Popper JS -->
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"></script>
+
+<!-- Latest compiled JavaScript -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/js/bootstrap.bundle.min.js"></script>
+<link rel="stylesheet" href="css/motorcycledetails.css">
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+
+
+
+</head>
+<body class="bg-white">
+    <div class="container" id="Home">
+        <nav class="navbar navbar-expand-md navbar-dark bg-dark fixed-top" >
+           <a href="" class="navbar-brand " id="logo">
+<img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAEAAAABACAYAAACqaXHeAAAABmJLR0QA/wD/AP+gvaeTAAANfklEQVR4nO2aeWDV1ZXHP/f3FkJeViDshAAJEYiALIobgwaQTRBCpii12MGiVqUD2LFORTOKjlBahNaZYkWFVkUCArJEIAFEVhGGLWGHlEA2kheSl+Xtt3+8vF9ekrdGmH+a71/3nnvu75x77nLOPfcHrWhFK1rRila04p8VwrMyZsL0d6VgroTlOdvW/7ZR26S0JCnFOqDnHdLFDtxAinwpZB6SQ1qHOLhjR6bxDskDQOtZkYKXAYOAl4FGBpCImcDgO6kMEIeQgwU8gQCHVjpGT0zfI6T80mYQa/dmZlbfboGKZ0XCCqAa5IqmjMIpNiEovd0KBIAG5Ggp+Iu2Vl5LnTj9nVGPP9nhdgoQgVkakJGRoRw9eiE6GN5BgwboZz//85nlIvK3JWbRzikb2noYICmqMX+d2Uy5sYL3/7SSy1fy/X3aiBBv2qtv/nnv3r32UPT3hpAMECyklGkmOytOlNO11ouKD3UCg7Y5vba2jllzXubWrUoARj86koED+rNl+04uXr7ShFscQOGp7C2Z136MrrfVAFLKOODjKhuTfigDm7M5T/s2MMzHIl61+jPWZm4CIDYmmo9XLifCYADg+IlTfPjxX5uujgqhMGPXlvU7W6qzpqUd3Uh9fNrw3okpAy/kneykKEqOxcHQo2Vg9TJ4gORoiNA1p5feLOO9pStwOFwdn5s9i5T+d6ntXTp3YuK4McRER3HydB4OhwOgLZIZffr2u3rl4tlTLdFfCcziG2MmpD8tnMphIWTWtm+ydwNdz9wCi8M7v06BuDDvbZu3ZmG12gBI6BnPhMdSm/EIIZg8aRz/8/5iEuJ7qJ+ViDVjJqQ/3ZIxtNgAj46fPl4Kucr9jerqGn2pGcrMvvt0aguKl01nsVrJ2rlbrT+ZPhVF8a1afI9uLFvyNnen9HeThBRy1ZhJaRNCHUeLDDBu3IwEReFzQAdwV99Epj0xkXyT/35d2nqn79t/CJPJ5eINUTG0TR5BUR1I6Z0fICLCwHtvvc7dA/q5STopxeejJ6b1DmUsIRsgPT1dY9c6vgBiALp17cKijP/EqQ2jwuq7n0ZAbBvvbfv2H1bLKQ+Mosqp5ZQR9pXA36vB4cMQer2Otxa+SnyPbm5SNIgvhw6d4+WU8Y6QDWCscb6IlCMAdDodr786j+ioSIwW//1i9N5dTm1dHcdPnFTrfYfcr5bNDjhXCftL4HoNeLNDRISBhb+ZTxu93k0a1q6zcW5TvoyMDGXU+GndaaJGSAYYPz49Tgjxlrv+7DMzSezTC4BbfmYfXAbwhlOnc9XDL6p9HB3jezXjMTsg9xYcKIGSuubfSOgZz+xnZqp1CW8+9ti0Lp48+78/k6VVlILRE6av8qSHZACbxjkfiAZIiO/BlEnj1DZvAY8non0Y4EzuObUcn5yCEL5Dkxo7nDDCD2XN5U2ZNI7evRLc1UinRrzirgwdOkeHwOVWBLPGTJ7R1d0WtAHGjp3aESlecNfnzP4ZGk1DGBHIAOFeIj+AM3kNBuie1M87UxOUW+BAKVwxNWwLRVF41nMVCPFc6tSp7QGOHfvQJgXfulml3fYTN5+2/tTcCsKvdM+4pldCPMOGDFLrduk78AHXpmvrJeSSUnLl6t/VeqeewR/gTgkXq+BGjUTvtHBf1zCGDRlEYp9eXLp8FcAgrJqngD8CKE6+kIJHAVCUfwWWASggpgUafFNMnjiu0VK1+gh83AjTePf/xSWl1JldgYMQgg4dO4eiBgC5pWZ+vauQ5UcrkAgmjR/r2awuCWcbx0bc8yjlsFHp6REAikYjNgEXgxWo0Wh4+MERjWgWP7MP0MZHwF1wvVAtx3VoT2p8G5KiQB/CyZRfUYeUsD63gl9mFXH30OFotep+uzd18pOdAHI2biyXiNP1dK3OLB8A0O74OvMS0NefkNRJ6fOFlL8H6N8vmeioyEbt9gAG0PkY0M2ycrXcrWsXdAr0joSeEZBfDfkm1/byh/OlNWo5t7SOuXvs9E5M4sK5swACp30U8KWrIvcBgwCcTu4DdgZla4FUb++eFxQ3nAGU1PqQYjRWqOXOnTuqZY2APpHwcGeXMXz5hcIqC2U1tka08lobl3Q9GghOpxpYCIl6YRJCJkGQXkBIBrjLSX2a++lABvB15XTvfwBDeHizdr0Cd0XDg52gnZco8nD+La/ftUQ0nCWKItTV7RTOy+6ykKIPBGkAiVCnvXOnjs3aA+wArxEcgMXSED6GhfmIk3ElT4Z3gAExoK1fDsZaG2c9ln8jfSIbEg5SkuQu6xz6qx46dYOg44CGLdC+fbvmAgOsAF/NZg8DaDU+AgUPdDfAA51cQdXh/Erfl6WwRmdUrKqHdFR50F1eIKBUF9R7nF4X9D3DL8rKjeTmnVfrG7/eRtbO3Uh/V0Bc8cS9HSAhRus7naVttJpUa0RF4ZlVDskA6vR4uBgVmgCJtaZDOnj4KM+99Ao3CotUWmWViT+s+F9emv8auWfP4w+KgHnDY/jV/R3RegkwpPS+KTMzM62AO7lYCMEaQMitAANT+nvdq4EMUJ/lospk4nfLPuDNRUuoMjUkDzxD6gsXLzPvPxay8qPV6iXJF9KSI/jv0V2JaBpoWGs9a42yFELIcUg5Xwj5GASZFM3IyFBGjhrz7yMfuu/3nsq6UWaGY+VeOtYjSrFT9n+7WfP5OjXjCxAdFcm8l59nyD0D+WztBr7avA2brWHQvRLi+c0rc+md4P8x6qzRxoIdhZjqc3FKZSH6XcvdzZeyt61P8tU36KywlHI48L23tiobHPLyZCKdTvK+/45DW9Zxq6wxw73DhjB/7vO0b6eeURQWFfPByk/4/ofjKk2n0/Fvs54ibcpEvzfF3DIb83cWUmt1oBTmoj+4xjVAQdauret9pspCMUAkUIEXt251wp6G7UyVsYy8w/vIPbSXitKiRryxMdG8MOfnPDLyQV9y2Jq1i5UfrcZibUgyPPIvD7HgVy94Jj6aYf91Mwt3FyFObkNz3n354/3sbevn+eoT2PfUQwhhklKeAIZ60mvr6qiurqHg7A0KLp/n2rlcrl862yyhFxFhIH3qZJ6YPJ7wtj6Sgy45PD5hLANT+vPu0uVcqX8H2PPtfgoLi3kn4zWio6O89n2oexi/GBbHqpyGGyZSHvI7Lndh7MSpKU60X4Ds5otZ30bfVq/TqYntujqzOz/vEwZDONOmTCRtyiQMhubRni8UV9t5e28hedkb0F46qNJ7dO/G4kULievQ3ms/k6matJ/+AumwA0ip0XXJ+fqLEl9y1BUgpeZphEzxp5TVYsVqCZD7wpWcGHrPQFIfGcmDI+71G+U1hQS2XjDxwdFyamxOGDwFIuLQntwC0knB9RvMf/UNli15mw5egrLsPfvcgwchjvgbPHgYwCnFaiGcaeCKkYOBVqvFYAjHEB5ObEw0SYm96d8vmcEDU4iNCeoNtRHOl1tYfqSc06WNHxfsiQ8gDTHoDn0GTjvFJaW89sY7LFv8FhERhka827/J9qx+FkhmyG+DUspngE9C7ecPxjoHK48b+eaSyW9YrRSdR394DdTP8N0p/Vmy6A20Wte5fOjID7zx9mI3e43UO3rmbNzox0G37GHkc+BqQK4gUG118unJCp76qoDtF/0PHsDZJRnbfTOR9fN2+kwen/5tLQA2m40/f7Ra5RVSrgw0eAjBC6gfFsIqpVwAfBVqXzeMdQ42nK1kw9kq1z4PAY6u/ek5ciqF+1zi123YzIB+yVy6fJXComI3m0lxyKXBfK/Fz+NSys3A5FD6nC+3kJlXSc7VGuyBptsLFAGzBsXyzKBY3lu6nD3f7vfF+uvsbevvuAFigRNAvC8eh1NyosTMd9dqOVBQQ3F1y3/o6Bap4/WH40jp6PLCJlM1z744v1FWyQVxvKI4dsSxYx/6v0i4uVusESBdT2Q5QLjZLrlhsnGlwspFo4UL5VbOlVuo8ZcvDwIaRZDWL4pnB8fStklycWvWLpZ/8KEnqUqjEUPr85xBIeQzwBNCiMNSyp/k3bRseumbQo3N1ytmC5ESF8aC+zuQ2K55+FtZWcXOnL2eJAeSn4UyePiRBgAQQmz98sytFzSC4NZcEOgQrmH2Pe2YkBjp9T3hytV8/uvdpRQWecY44pfZ2zM3hyrrtv0j9Mcj5bN3XjGtrDA7WvzbTVQbhSdTYpjeL5owbXPVHA4HGzZt49O/rfW8Njuk5MWc7etXtkTmbf1J6k9HbvbNLbN+e7rUHNITT7u2GmYMiGZKchThXh4RpJQcOXqcv3zyV64V3PBsMiF5Onv7+pBn3o078pvc4gOl7x25UbegtMbud4ulxIUxOTmS1F4R6L2klSqrTHx34DCbt2SRf62gafMxjUbMCHXPN8UdMQDA704WG+wm5f1TJeafFlTZ1BtkR4OWUT0NjE+MVA83KSWm6mqMxgoKi0o4f/ESZ3LPcSbvHE5nMy9ShRSLYg0sr8/x/SiEZIBgX5LvEEzAR3YpluzdnlkckDtIhOQFBGKqhP/PwUsQB6V0rnPoHWv2btrk/SnoRyAkA0jkRmAOCL+PqS2ADahGUIoU+VI6zylCHFDszv07dnxVFLB3K1rRila0ohWtaEUL8A9MBwUfE4YIlwAAAABJRU5ErkJggg==">
+           </a>
+           <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarresponsive">
+               <span class="navbar-toggler-icon"></span>
+           </button>
+           <div class="collapse navbar-collapse" id="navbarresponsive">
+               <ul class="navbar-nav ml-auto">
+                   <li class="nav-item">
+                    <a href="SportsInfo.html" class="nav-link">Home</a>
+                   </li>
+                   <li class="dropdown text-white">
+                       <a href="" class="nav-link dropdown-toggle" role="button"data-toggle="dropdown">Sports</a>
+                       <div class="dropdown-menu bg-dark">
+                           <a href="swimmingdetails.html" class="dropdown-item">Swimming</a>
+                           <a href="sportsdetails1.html" class="dropdown-item">Cricket</a>
+                           <a href="golf.html" class="dropdown-item">Golf</a>
+                           <a href="volleyball.html" class="dropdown-item">Volley Ball</a>
+                           <a href="footballdetails.html" class="dropdown-item">Foot Ball</a>
+                           <a href="tennisdetails.html" class="dropdown-item">Tennis</a>
+                           <a href="judo.html" class="dropdown-item">Judo</a>
+                           <a href="Chess.html" class="dropdown-item">Chess</a>
+                           <a href="badminton.html" class="dropdown-item">Badminton</a>
+                           <a href="billiardsdetails.html" class="dropdown-item">Billards</a>
+                           <a href="motorcycledetails.html" class="dropdown-item">Motor Cycle Racing</a>
+                       </div>
+                   </li>
+                   <li class="nav-item">
+                       <a href="#about" class="nav-link">About Us</a>
+                   </li>
+                   <li class="nav-item">
+                       <a href="contactus.html" class="nav-link">Contact Us</a>
+                   </li>
+                   <!-- <li class="nav-item">
+                       <a href="" class="nav-link">Log in</a>
+                   </li> -->
+               </ul>
+           </div>
+        </nav>
+        <div>
+    <!-- header  -->
+
+    <div class="container-fluid text-center">
+        
+    </div>
+
+
+
+
+
+    <!-- content details  -->
+
+    <div class="container-fluid bgImage text-center">
+        <div class="container" style="background-color: transparent;">
+            <img src="data:image/png;base64,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">
+        </div>
+
+        
+
+        <div class="container my-4">
+            <p style="font-weight: 500;">Motorcycle racing is the motorcycle sport of racing motorcycles. Major varieties include motorcycle road racing and off-road racing, both either on circuits or open courses, and track racing. Other categories include hill climbs, drag racing and land speed record trials.</p>
+        </div>
+
+        <!-- img start -->
+
+        <div class="container">
+            <img src="Img/images/motoracebanner.jpg" class="mx-auto d-block" style="width:90%"> 
+        </div>
+       
+        <!-- img end  -->
+
+    </div>
+    <div class="container-fluid"><hr style="margin-top:-50px; height: 100px;"></div>
+
+    <div class="container my-4 mt-1 text-center" style="margin-top:-100px;">
+        <p style="font-weight:500 ;">Top racers</p>
+    </div>
+
+    <!-- cards start  -->
+
+    <div class="container text-center  d-flex" id="cards">
+        <div class="container-fluid row">
+        <div class="card border-0 bg-transparent col-md-4" style="width:400px">
+            <a href="#" data-toggle="popover" title="Popover Header" data-content="Some content inside the popover"><img class="card-img-top" src="Img/images/1 Giacomo Agostini.jpg" alt="Card image" style="width:100%"></a>
+          <div class="card-body">
+            <h4 class="card-title">Giacomo Agostini</h4>
+            <p class="card-text"></p>
+            <a href="#" class="btn btn-danger stretched-link">See Profile</a>
+          </div>
+        </div>
+
+        <h2></h2>
+        <p></p>
+        <div class="card border-0 bg-transparent col-md-4" style="width:400px">
+          <img class="card-img-top" src="Img/images/mike.jpg" alt="Card image" style="width:100%">
+          <div class="card-body">
+            <h4 class="card-title">Mike Hailwood</h4>
+            <p class="card-text"></p>
+            <a href="#" class="btn btn-danger stretched-link">See Profile</a>
+          </div>
+        </div>
+
+        <h2></h2>
+        <p></p>
+        <div class="card border-0 bg-transparent col-md-4" style="width:400px">
+          <img class="card-img-top" src="Img/images/angel.jpg" alt="Card image" style="width:100%">
+          <div class="card-body">
+            <h4 class="card-title">Ángel Nieto</h4>
+            <p class="card-text"></p>
+            <a href="#" class="btn btn-danger stretched-link">See Profile</a>
+          </div>
+        </div>
+        </div>
+    </div>
+
+    <!-- cards end -->
+
+    <div class="container-fluid"><hr style="margin-top:40px; height: 100px;"></div>
+
+    <!-- players section start  -->
+
+    <section class="about us">
+        <div class="container">
+            <h1 class="text-center" id="title1">Ángel Stats</h1>
+            <div class="row">   
+                <div class="col-md-6">
+                    <p class="para1" style="font-weight: 500;">Ángel Nieto Roldán was a Spanish professional Grand Prix motorcycle racer. He was one of the most accomplished motorcycle racers in the history of the sport, winning 13 World Championships </p>
+                    <ul>    
+                        <li>Active years	1964 – 1986</li>
+                        <li>First race	1964 50 cc Spanish Grand Prix</li>
+                        <li>Team(s)	Derbi, Morbidelli, Kreidler, Bultaco, Minarelli, Garelli</li>                       
+                    </ul>
+
+                </div>
+
+                <div class="col-md-6">
+                    <img src="" class="img-fluid" alt="" width="500">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    
+
+
+    <section class="about us">
+        <div class="container">
+            <h1 class="text-center" id="title1">Mike's Stats</h1>
+            <div class="row">   
+                <div class="col-md-6">
+
+                    <p class="para1" style="font-weight: 500;">Stanley Michael Bailey Hailwood, MBE GM (2 April 1940 – 23 March 1981) was a British professional motorcycle racer and racing driver. He is regarded by many as one of the greatest racers of all time.[1][2] He competed in the Grand Prix motorcycle world championships from 1958 to 1967 and in Formula One between 1963 and 1974. Hailwood was known as "Mike The Bike" because of his natural riding ability on motorcycles with a range of engine capacities.</p>
+                    <ul>    
+                        <li> First race	1958 250cc Isle of Man TT</li>
+                        <li>Last race	1967 350cc Japanese Grand Prix </li>
+                        <li>Last win	1967 350cc Japanese Grand Prix</li>
+                 
+                    </ul>
+
+                </div>
+
+                <div class="col-md-6">
+                    <img src="" class="img-fluid" alt="" width="500">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    
+
+
+    <section class="about us">
+        <div class="container">
+            <h1 class="text-center" id="title1">Giacomo'Stats</h1>
+            <div class="row">   
+                <div class="col-md-6">
+                    <p class="para1" style="font-weight: 500;">Giacomo Agostini is an Italian multi-time world champion Grand Prix motorcycle road racer. Nicknamed Ago, he amassed 122 Grand Prix wins and 15 World Championship titles</p>
+                    <ul>    
+                        <li> First race	1963 250cc Nations Grand Prix</li>
+                        <li>Last race	1977 500cc British Grand Prix</li>
+                        <li>First win	1965 350cc German Grand Prix
+                        </li>
+                       
+                    </ul>
+
+                </div>
+
+                <div class="col-md-6">
+                    <img src="" class="img-fluid" alt="" width="500">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- players section end  -->
+
+
+    <!-- cricket rules and regulations start -->
+
+
+    <!-- <div class="container my-4 mt-1 text-center">
+        <p>CRICKET IS WIDELY PLAYED IN MANY </p>
+    </div> -->
+
+    <section>
+        <div class="container">
+            <h1 id="title1" class="text-center">Rule and regulations</h1>
+            <div class="row">
+                <div class="col-md-6">
+                    <ul>
+                        <li>MotoGP riders have three, 45-minute sessions of practice at the end of which a first ranking is established.</li>
+                        <li>The fastest two riders from this session are allowed to join the session bringing together the fastest ten riders for another qualifying session used to decide the first twelve places on the grid.</li>
+                        <li>Each round lasts between 40 and 45 minutes and is run over a distance of between 100 and 130 kilometres, depending on the circuit.</li>
+                        <li>A sliding scale of points are awarded at the finish for the first 15 as follows: 25, 20, 15, 13, 11, 10, 9, 8, 7, 6, 5, 4, 3, 2, 1 pt.</li>
+                        <li>For Moto2 and Moto3 substitute or wild card riders in 2022, the minimum age is 17 years.</li>
+                        
+                            
+
+                    </ul>
+                </div>  
+
+                <div class="col-md-6">
+                    <img src="" class="img-fluid" alt="" width="450">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- cricket rules and regulations end -->
+
+    <!-- video start -->
+
+    <div class="container">
+        <video src="" class="mx-auto d-block"></video> 
+    </div>
+
+    <!-- video end -->
+    
+    
+
+
+    <div class="container-fluid"><hr style="margin-top:150px; height: 100px;"></div>
+
+
+    <!-- pagination  -->
+
+    <div class="container">
+        <ul class="pagination bg-transparent justify-content-center">
+            <li class="page-item"><a class="page-link" href="javascript:void(0);">Previous</a></li>
+            <li class="page-item"><a class="page-link" href="javascript:void(0);">1</a></li>
+            <li class="page-item"><a class="page-link" href="javascript:void(0);">2</a></li>
+            <li class="page-item"><a class="page-link" href="javascript:void(0);">Next</a></li>
+        </ul>
+    </div>
+
+    <!-- icons -->
+    <div class="container footer bg-transparent">
+
+       <div class="container text-center">
+         <a href="#" class="fa fa-facebook"></a>
+         <a href="#" class="fa fa-twitter"></a>
+         <a href="#" class="fa fa-google"></a>
+       </div>
+    </div>
+    <!-- Footer -->
+<div class="Container-fluid text-white" id="footer">
+    
+    <div class="row" id="footer-row">
+        <div class="col-md-4 col-sm-12 logo mt-3 mb-2 text-center">
+           <a href=""><img src="data:image/png;base64,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"></a>
+           <h1>Sports.Info</h1>
+           <h6>Information you need <br>Knowledge we have</h6>
+        </div>
+        <div class="col-md-2 col-sm-6 mb-2 mt-3 ml-3" id="visit">
+            <h3>Visit</h3>
+            <a href="#Home"><h5>Home</h5></a>
+            <a href="#Content"><h5>Sports</h5></a>
+            <a href="#about"><h5>About Us</h5></a>
+            <a href="contactus.html"><h5>ContactUs</h5></a>
+        </div>
+        <div class="col-md-2 col-sm-6 mb-2 mt-3 ml-3">
+            <h3>Follow Us</h3>
+            <h5>Facebook</h5>
+            <h5>Twitter</h5>
+            <h5>Youtube</h5>
+
+        </div>
+        <div class="col-md-3 col-sm-6 mb-2 mt-3 ml-3">
+            <h3>Contact</h3>
+            <h5>+923 123456789</h5>
+            <h3>Address</h3>
+            <h5>Karachi Pakistan</h5>
+            <h3>Mail Address</h3>
+            <h5>abc@gmail.com</h5>
+        </div>
+    </div>
+
+</div>
+<div class="Container-fluid text-center text-white" id="copyright">
+<div class="container" id="cpyrght">
+    <div class="row">
+        <div class="col-md-12 col-sm-12">
+            <h5>&copy; CopyRight Reserved 2022</h5>
+        </div>
+    </div>
+</div>
+</div>
+<!-- Footer -->
+
+  
+</body>
+</html>

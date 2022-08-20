@@ -1,0 +1,273 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Badminton</title>
+    <!-- Latest compiled and minified CSS -->
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/css/bootstrap.min.css">
+
+<!-- jQuery library -->
+<script src="https://cdn.jsdelivr.net/npm/jquery@3.6.0/dist/jquery.slim.min.js"></script>
+
+<!-- Popper JS -->
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"></script>
+
+<!-- Latest compiled JavaScript -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/js/bootstrap.bundle.min.js"></script>
+
+<link rel="stylesheet" href="css/Content.css">
+</head>
+<body>
+    <div class="Container-fluid">
+        <nav class="navbar navbar-expand-md navbar-dark bg-dark fixed-top" >
+            <a href="" class="navbar-brand " id="logo">
+                <img src="data:image/png;base64,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">
+            </a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarresponsive">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarresponsive">
+                <ul class="navbar-nav ml-auto">
+                    <li class="nav-item">
+                        <a href="SportsInfo.html" class="nav-link">Home</a>
+                    </li>
+                    <li class="dropdown text-white">
+                        <a href="" class="nav-link dropdown-toggle" role="button"data-toggle="dropdown">Sports</a>
+                        <div class="dropdown-menu bg-dark">
+                            <a href="swimmingdetails.html" class="dropdown-item">Swimming</a>
+                        <a href="sportsdetails1.html" class="dropdown-item">Cricket</a>
+                        <a href="golf.html" class="dropdown-item">Golf</a>
+                        <a href="volleyball.html" class="dropdown-item">Volley Ball</a>
+                        <a href="footballdetails.html" class="dropdown-item">Foot Ball</a>
+                        <a href="tennisdetails.html" class="dropdown-item">Tennis</a>
+                        <a href="judo.html" class="dropdown-item">Judo</a>
+                        <a href="Chess.html" class="dropdown-item">Chess</a>
+                        <a href="badminton.html" class="dropdown-item">Badminton</a>
+                        <a href="billiardsdetails.html" class="dropdown-item">Billards</a>
+                        <a href="motorcycledetails.html" class="dropdown-item">Motor Cycle Racing</a>
+                        </div>
+                    </li>
+                    <li class="nav-item">
+                        <a href="#footer" class="nav-link">About Us</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="ContactUs.html" class="nav-link">Contact Us</a>
+                    </li>
+                    <!-- <li class="nav-item">
+                        <a href="" class="nav-link">Log in</a>
+                    </li> -->
+                </ul>
+            </div>
+        </nav>
+    </div>
+    <div class="container" id="content">
+        <div class="row">
+            <div class="col-md-7 col-sm-12">
+                <h1>Badminton</h1>
+                <p>Badminton is a racquet sport played using racquets to hit a shuttlecock across a net. Although it may be played with larger teams, the most common forms of the game are "singles" (with one player per side) and "doubles" (with two players per side). Badminton is often played as a casual outdoor activity in a yard or on a beach; formal games are played on a rectangular indoor court. Points are scored by striking the shuttlecock with the racquet and landing it within the opposing side's half of the court.</p>
+                <p>Each side may only strike the shuttlecock once before it passes over the net. Play ends once the shuttlecock has struck the floor or if a fault has been called by the umpire, service judge, or (in their absence) the opposing side.
+                    The shuttlecock is a feathered or (in informal matches) plastic projectile which flies differently from the balls used in many other sports. In particular, the feathers create much higher drag, causing the shuttlecock to decelerate more rapidly. Shuttlecocks also have a high top speed compared to the balls in other racquet sports. The flight of the shuttlecock gives the sport its distinctive nature.</p>
+           </div>
+            <div class="col-md-5 col-sm-12">
+                <img src="Img/badminton/badminton.webp" alt="" class="imgfluid w-100 h-100">
+            </div>
+        </div>
+    </div>
+    
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12 col-sm-12">
+                <p>The game developed in British India from the earlier game of battledore and shuttlecock. European play came to be dominated by Denmark but the game has become very popular in Asia, with recent competitions dominated by China. In 1992, badminton debuted as a Summer Olympic sport with four events: men's singles, women's singles, men's doubles, and women's doubles; mixed doubles was added four years later. At high levels of play, the sport demands excellent fitness: players require aerobic stamina, agility, strength, speed, and precision. It is also a technical sport, requiring good motor coordination and the development of sophisticated racquet movements.
+                </p>
+            </div>
+        </div>
+    </div>
+    <hr>
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12 col-sm-12">
+                <h2>History</h2>
+                <p>Games employing shuttlecocks have been played for centuries across Eurasia, but the modern game of badminton developed in the mid-19th century among the expatriate officers of British India as a variant of the earlier game of battledore and shuttlecock. ("Battledore" was an older term for "racquet".) Its exact origin remains obscure. The name derives from the Duke of Beaufort's Badminton House in Gloucestershire, but why or when remains unclear. As early as 1860, a London toy dealer named Isaac Spratt published a booklet entitled Badminton Battledore – A New Game, but no copy is known to have survived. An 1863 article in The Cornhill Magazine describes badminton as "battledore and shuttlecock played with sides, across a string suspended some five feet from the ground"</p>
+                <p>The game originally developed in India among the British expatriates, where it was very popular by the 1870s. Ball badminton, a form of the game played with a wool ball instead of a shuttlecock, was being played in Thanjavur as early as the 1850s and was at first played interchangeably with badminton by the British, the woollen ball being preferred in windy or wet weather.</p>
+                <p>Early on, the game was also known as Poona or Poonah after the garrison town of Poona, where it was particularly popular and where the first rules for the game were drawn up in 1873. By 1875, officers returning home had started a badminton club in Folkestone. Initially, the sport was played with sides ranging from 1 to 4 players, but it was quickly established that games between two or four competitors worked the best. The shuttlecocks were coated with India rubber and, in outdoor play, sometimes weighted with lead. Although the depth of the net was of no consequence, it was preferred that it should reach the ground</p>
+            </div>
+        </div>
+    </div>
+    <div class="container mb-4">
+        <div class="row">
+            <div class="col-md-6 col-sm-12">
+                <img src="Img/badminton/history.jpg" alt="" class="imgfluid w-100 h-100">
+            </div>
+            <div class="col-md-6 col-sm-12">
+                <img src="Img/badminton/badminton-history.jpg" alt="" class="imgfluid w-100 h-100">
+            </div>
+        </div>
+    </div>
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12 col-sm-12">
+                <p>The sport was played under the Pune rules until 1887, when J. H. E. Hart of the Bath Badminton Club drew up revised regulations. In 1890, Hart and Bagnel Wild again revised the rules. The Badminton Association of England (BAE) published these rules in 1893 and officially launched the sport at a house called "Dunbar" in Portsmouth on 13 September. The BAE started the first badminton competition, the All England Open Badminton Championships for gentlemen's doubles, ladies' doubles, and mixed doubles, in 1899. Singles competitions were added in 1900 and an England–Ireland championship match appeared in 1904.</p>
+                <p>England, Scotland, Wales, Canada, Denmark, France, Ireland, the Netherlands, and New Zealand were the founding members of the International Badminton Federation in 1934, now known as the Badminton World Federation. India joined as an affiliate in 1936. The BWF now governs international badminton. Although initiated in England, competitive men's badminton has traditionally been dominated in Europe by Denmark. Worldwide, Asian nations have become dominant in international competition. China, Denmark, Indonesia, Malaysia, India, South Korea, Taiwan (playing as 'Chinese Taipei') and Japan are the nations which have consistently produced world-class players in the past few decades, with China being the greatest force in men's and women's competition recently.The game has also become a popular backyard sport in the United States.</p>
+            </div>
+        </div>
+    </div>
+    <hr>
+    <div class="container">
+        <h2>Rules</h2>
+                <p>The following information is a simplified summary of badminton rules based on the BWF Statutes publication, Laws of Badminton.</p>
+        <div class="row">
+            <div class="col-md-7 col-sm-12">
+                <h3>1. Court</h3>
+                <p>The court is rectangular and divided into halves by a net. Courts are usually marked for both singles and doubles play, although badminton rules permit a court to be marked for singles only.[13] The doubles court is wider than the singles court, but both are of the same length. The exception, which often causes confusion to newer players, is that the doubles court has a shorter serve-length dimension. <br>
+                    The full width of the court is 6.1 metres (20 feet), and in singles this width is reduced to 5.18 metres (17.0 feet). The full length of the court is 13.4 metres (44 feet). The service courts are marked by a centre line dividing the width of the court, by a short service line at a distance of 1.98 metres (6 feet 6 inches) from the net, and by the outer side and back boundaries. In doubles, the service court is also marked by a long service line, which is 0.76 metres (2 feet 6 inches) from the back boundary.
+                    <br>
+                    The net is 1.55 metres (5 feet 1 inch) high at the edges and 1.524 metres (5.00 feet) high in the centre. The net posts are placed over the doubles sidelines, even when singles is played.
+                    <br>
+                    The minimum height for the ceiling above the court is not mentioned in the Laws of Badminton. Nonetheless, a badminton court will not be suitable if the ceiling is likely to be hit on a high serve.</p>
+            </div>
+            <div class="col-md-5 c0l-sm-12">
+                <img src="Img/badminton/court.jpg" alt="" class="imgfluid w-100 h-100">
+            </div>
+        </div>
+    </div>
+    <div class="container mt-3">
+        <div class="row">
+            <div class="col-md-7 col-sm-12">
+                <h3>2. Serving</h3>
+                <p>When the server serves, the shuttlecock must pass over the short service line on the opponents' court or it will count as a fault. The server and receiver must remain within their service courts, without touching the boundary lines, until the server strikes the shuttlecock. The other two players may stand wherever they wish, so long as they do not block the vision of the server or receiver. <br>
+                    At the start of the rally, the server and receiver stand in diagonally opposite service courts (see court dimensions). The server hits the shuttlecock so that it would land in the receiver's service court. This is similar to tennis, except that in a badminton serve the whole shuttle must be below 1.15 metres from the surface of the court at the instant of being hit by the server's racket, the shuttlecock is not allowed to bounce and in badminton, the players stand inside their service courts, unlike tennis.
+                    <br>
+                    When the serving side loses a rally, the server immediately passes to their opponent(s) (this differs from the old system where sometimes the serve passes to the doubles partner for what is known as a "second serve").
+                    In singles, the server stands in their right service court when their score is even, and in their left service court when their score is odd.
+                    <br>
+                    In doubles, if the serving side wins a rally, the same player continues to serve, but he/she changes service courts so that she/he serves to a different opponent each time. If the opponents win the rally and their new score is even, the player in the right service court serves; if odd, the player in the left service court serves. The players' service courts are determined by their positions at the start of the previous rally, not by where they were standing at the end of the rally. A consequence of this system is that each time a side regains the service, the server will be the player who did not serve last time</p>
+            </div>
+            <div class="col-md-5 c0l-sm-12">
+                <img src="Img/badminton/serving.jpg" alt="" class="imgfluid w-100 h-100">
+            </div>
+        </div>
+    </div>
+    <div class="container mt-3">
+        <div class="row">
+            <div class="col-md-12 col-sm-12">
+                <h3>3. Scoring</h3>
+                <p>Each game is played to 21 points, with players scoring a point whenever they win a rally regardless of whether they served[13] (this differs from the old system where players could only win a point on their serve and each game was played to 15 points). A match is the best of three games.<br>
+                    AIf the score ties at 20–20, then the game continues until one side gains a two-point lead (such as 24–22), except when there is a tie at 29–29, in which the game goes to a golden point of 30. Whoever scores this point wins the game.                    <br>
+                    When the serving side loses a rally, the server immediately passes to their opponent(s) (this differs from the old system where sometimes the serve passes to the doubles partner for what is known as a "second serve").
+                    In singles, the server stands in their right service court when their score is even, and in their left service court when their score is odd.
+                    <br>
+                    At the start of a match, the shuttlecock is cast and the side towards which the shuttlecock is pointing serves first. Alternatively, a coin may be tossed, with the winners choosing whether to serve or receive first, or choosing which end of the court to occupy first, and their opponents making the leftover the remaining choice.
+                    In subsequent games, the winners of the previous game serve first. Matches are best out of three: a player or pair must win two games (of 21 points each) to win the match. For the first rally of any doubles game, the serving pair may decide who serves and the receiving pair may decide who receives. The players change ends at the start of the second game; if the match reaches a third game, they change ends both at the start of the game and when the leading player's or pair's score reaches 11 points.</p>
+            </div>
+        </div>
+    </div>
+    <hr>
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12 col-sm-12">
+                <h1>2021 BWF World Championships</h1>
+                <p>The 2021 BWF World Championships (officially known as the TotalEnergies BWF World Championships 2021 for sponsorship reasons) was a badminton tournament which took place from 12 to 19 December 2021 at Palacio de los Deportes Carolina Marín in Huelva, Spain.</p>
+                <p>Palacio de los Deportes Carolina Marín is a Spanish sports complex in the city of Huelva, in Andalusia, Spain. Her name is a tribute to the Huelva badminton player Carolina Marín.[2] It is the most important indoor sports facility with the largest capacity in all of Huelva and the province.
+
+                    The Palacio de los Deportes has hosted CB Ciudad de Huelva matches since they moved from the Andrés Estrada Sports Center. They began playing at the Palacio in 1999-00, until his disappearance in 2008; being the modern pavilion in which the Huelva team fought to return to the Liga ACB, being about to achieve it in the 2004–05 and 2006–07 seasons. It registered a historic full house in the fourth promotion match of the 2004–05 season between CB Ciudad de Huelva and Baloncesto Fuenlabrada, in which, in the event of a Huelva victory, Ciudad would return to the Liga ACB, although it was finally the Madrid team the one who achieved the square.
+                    
+                    After the disappearance of the CB Ciudad de Huelva, the CD Huelva Baloncesto was founded which, since then, has been a venue in the Palace.</p>
+            </div>
+        </div>
+    </div>
+    <hr>
+    <div class="container">
+        <h1>Top 4 Players Of Badminton</h1>
+        <div class="row">
+            <div class="col-md-3 col-sm-12 mt-4">
+                <h5>Viktor Axelsen</h5>
+                <p>Viktor Axelsen (born 4 January 1994) is a Danish badminton player. He is the 2017 World champion and the 2020 Olympic champion. He won the 2010 World Junior Championships, beating South Korea's Kang Ji-wook in the final to become the first ever European singles player to hold the title. Axelsen is a three-time European champion, having won the title in 2016, 2018 and 2022</p>
+            </div>
+            <div class="col-md-3 col-sm-12">
+                <img src="Img/badminton/1rank.jpg" alt="" class="imgfluid w-100 h-100">
+            </div>
+            <div class="col-md-3 col-sm-12 mt-4">
+                <h5>Kento Momota</h5>
+                <p>Kento Momota (born 1 September 1994) is a Japanese badminton player. He has won several major badminton tournaments including two World Championships titles, two Asian Championships titles, and one All England title. Momota entered into Guinness Book of World Records for "The most badminton men's singles titles in a season", for his achievements by winning 11 titles in the 2019 season</p>
+
+            </div>
+            <div class="col-md-3 col-sm-12">
+                <img src="Img/badminton/2rank.jpg" alt="" class="imgfluid w-100 h-100">
+            </div>
+        </div>
+    </div>
+    <div class="container mt-3">
+        <div class="row">
+            <div class="col-md-3 col-sm-12">
+                <h5>P. V. Sindhu</h5>
+                <p>Pusarla Venkata Sindhu (born 5 July 1995) is an Indian badminton player. Considered one of India's most successful sportspersons, Sindhu has won medals at various tournaments such as the Olympics and on the BWF circuit, including a gold at the 2019 World Championships. She is the first and only Indian to become the badminton world champion and only the second individual athlete from India to win two consecutive medals at the Olympic Games.</p>
+            </div>
+            <div class="col-md-3 col-sm-12">
+                <img src="Img/badminton/3rank.jpg" alt="" class="imgfluid w-100 h-100">
+            </div>
+            <div class="col-md-3 col-sm-12">
+                <h5>Chen Yufei</h5>
+                <p>Chen Yufei ( born 1 March 1998) is a Chinese badminton player. She is the reigning Olympic champion. She won the girls' singles junior titles at the 2016 Asian and the World Junior Championships.[1][2] At the same year, Chen clinched her first senior title at the Macau Open.[3] She was awarded as the 2017 Eddy Choong Most Promising Player of the Year.[4][5] On 17 December 2019, she reached a career-high BWF World Ranking as world number 1.</p>
+
+            </div>
+            <div class="col-md-3 col-sm-12">
+                <img src="Img/badminton/4rank.jpg" alt="" class="imgfluid w-100 h-80">
+            </div>
+        </div>
+    </div>
+    
+    <br>
+    <br>
+    <br>
+    <center><h5>There is always more to know, We will update more Information about Badminton. Stay tuned with Us. Thanks</h5></center>
+<br>
+<br>
+<br>
+    <!-- Footer -->
+<div class="Container-fluid text-white" id="footer">
+    
+    <div class="row" id="footer-row">
+        <div class="col-md-4 col-sm-12 logo mt-3 mb-2 text-center">
+           <a href=""><img src="data:image/png;base64,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"></a>
+           <h1>Sports.Info</h1>
+           <h6>Information you need <br>Knowledge we have</h6>
+        </div>
+        <div class="col-md-2 col-sm-6 mb-2 mt-3 ml-3" id="visit">
+            <h3>Visit</h3>
+            <a href="#Home"><h5>Home</h5></a>
+            <a href="#Content"><h5>Sports</h5></a>
+            <a href="#about"><h5>About Us</h5></a>
+            <a href="ContactUs.html"><h5>ContactUs</h5></a>
+        </div>
+        <div class="col-md-2 col-sm-6 mb-2 mt-3 ml-3">
+            <h3>Follow Us</h3>
+            <h5>Facebook</h5>
+            <h5>Twitter</h5>
+            <h5>Youtube</h5>
+
+        </div>
+        <div class="col-md-3 col-sm-6 mb-2 mt-3 ml-3">
+            <h3>Contact</h3>
+            <h5>+923 123456789</h5>
+            <h3>Address</h3>
+            <h5>Karachi Pakistan</h5>
+            <h3>Mail Address</h3>
+            <h5>abc@gmail.com</h5>
+        </div>
+    </div>
+
+</div>
+<div class="Container-fluid text-center text-white" id="copyright">
+<div class="container" id="cpyrght">
+    <div class="row">
+        <div class="col-md-12 col-sm-12">
+            <h5>&copy; CopyRight Reserved 2022</h5>
+        </div>
+    </div>
+</div>
+</div>
+<!-- Footer -->
+</body>
+</html>

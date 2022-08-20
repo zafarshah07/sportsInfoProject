@@ -1,0 +1,350 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <!-- Latest compiled and minified CSS -->
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/css/bootstrap.min.css">
+
+<!-- jQuery library -->
+<script src="https://cdn.jsdelivr.net/npm/jquery@3.6.0/dist/jquery.slim.min.js"></script>
+
+<!-- Popper JS -->
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"></script>
+
+<!-- Latest compiled JavaScript -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/js/bootstrap.bundle.min.js"></script>
+
+<link rel="stylesheet" href="css/judo.css">
+</head>
+<body>
+    
+    <div class="container">
+        <nav class="navbar navbar-expand-md navbar-dark bg-dark fixed-top" >
+            <a href="" class="navbar-brand " id="logo">
+                <img src="data:image/png;base64,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">
+            </a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarresponsive">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarresponsive">
+                <ul class="navbar-nav ml-auto">
+                    <li class="nav-item">
+                        <a href="SportsInfo.html" class="nav-link">Home</a>
+                    </li>
+                    <li class="dropdown text-white">
+                        <a href="" class="nav-link dropdown-toggle" role="button"data-toggle="dropdown">Sports</a>
+                        <div class="dropdown-menu bg-dark">
+                            <a href="swimmingdetails.html" class="dropdown-item">Swimming</a>
+                        <a href="sportsdetails1.html" class="dropdown-item">Cricket</a>
+                        <a href="golf.html" class="dropdown-item">Golf</a>
+                        <a href="volleyball.html" class="dropdown-item">Volley Ball</a>
+                        <a href="footballdetails.html" class="dropdown-item">Foot Ball</a>
+                        <a href="tennisdetails.html" class="dropdown-item">Tennis</a>
+                        <a href="judo.html" class="dropdown-item">Judo</a>
+                        <a href="Chess.html" class="dropdown-item">Chess</a>
+                        <a href="badminton.html" class="dropdown-item">Badminton</a>
+                        <a href="billiardsdetails.html" class="dropdown-item">Billards</a>
+                        <a href="motorcycledetails.html" class="dropdown-item">Motor Cycle Racing</a>
+                        </div>
+                    </li>
+                    <li class="nav-item">
+                        <a href="#footer" class="nav-link">About Us</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="ContactUs.html" class="nav-link">Contact Us</a>
+                    </li>
+                    <!-- <li class="nav-item">
+                        <a href="" class="nav-link">Log in</a>
+                    </li> -->
+                </ul>
+            </div>
+        </nav>
+    </div>
+    <div class="container" id="content">
+        <div class="row">
+            <div class="col-md-7 col-sm-12">
+                <h1>Judo</h1>
+                <p>Judo (柔道), lit. "gentle way," is a system of unarmed combat, modern Japanese martial art, and Olympic sport (since 1964). Judo was created in 1882 by Jigoro Kano (嘉納治五郎) as an eclectic martial art, distinguishing itself from its predecessors (primarily Tenjin Shinyo-ryu jujutsu and Kitō-ryū jujutsu) due to an emphasis on "randori" (乱取り, lit. free sparring) instead of "kata" (pre-arranged forms) alongside its removal of striking and weapon training elements. Judo rose to prominence for its dominance over established jujutsu schools in tournaments hosted by the Tokyo Metropolitan Police Department (警視庁武術大会, Keishicho Bujutsu Taikai), resulting in its adoption as the department's primary martial art. A judo practitioner is called a "judoka", and the judo uniform is called "judogi".</p>
+                <p>The objective of competitive judo is to throw an opponent, immobilize them with a pin, or force an opponent to submit with a joint lock or a choke. While strikes and use of weapons are included in some pre-arranged forms (kata), they are not frequently trained and are illegal in judo competition or free practice. Judo's international governing body is the International Judo Federation, and competitors compete in the international IJF professional circuit.</p>
+            </div>
+            
+            <div class="col-md-5 col-sm-12">
+                <img src="Img/judo/judo.jpg" alt="" class="imgfluid w-100 h-100 ">
+            </div>
+        </div>
+    </div>
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12 col sm-12">
+                <p>Judo's philosophy revolves around two primary principles: "Seiryoku-Zenyo" (精力善用 lit. maximum efficient use of energy) and "Jita-Kyoei" (自他共栄, lit. mutual welfare and benefit). The philosophy and subsequent pedagogy developed for judo became the model for other modern Japanese martial arts that developed from koryū (古流, traditional schools). Judo also spawned a number of derivative martial arts around the world, such as Brazilian jiu-jitsu, Krav Maga, sambo, hapkido and ARB. Judo also influenced other combat styles such as close-quarters combat (CQC), mixed martial arts (MMA), shoot wrestling and submission wrestling.</p>
+            </div>
+        </div>
+    </div>
+    <hr>
+    <div class="container">
+        <div class="row">
+            <div class="col-md-8 col-sm-12">
+                <h3>History and Philosophy</h3>
+                <p>The early history of judo is inseparable from its founder, Japanese polymath and educator Kanō Jigorō (嘉納 治五郎, Jigoro Kano, 1860–1938), born Shinnosuke Jigorō (新之助 治五郎, Jigorō Shinnosuke). Kano was born into a relatively affluent family. His father, Jirosaku, was the second son of the head priest of the Shinto Hiyoshi shrine in Shiga Prefecture. He married Sadako Kano, daughter of the owner of Kiku-Masamune sake brewing company and was adopted by the family, changing his name to Kano. He ultimately became an official in the Shogunate government.</p>
+                <p>Jigoro Kano had an academic upbringing and, from the age of seven, he studied English, shodō (書道, Japanese calligraphy) and the Four Confucian Texts (四書, Shisho) under a number of tutors. When he was fourteen, Kano began boarding at an English-medium school, Ikuei-Gijuku in Shiba, Tokyo. The culture of bullying endemic at this school was the catalyst that caused Kano to seek out a Jūjutsu (柔術, Jujutsu) dōjō (道場, dōjō, training place) at which to train. <br>Early attempts to find a jujutsu teacher who was willing to take him on met with little success. Jujutsu had become unfashionable in an increasingly westernized Japan. Many of those who had once taught the art had been forced out of teaching or become so disillusioned with it that they had simply given up. Nakai Umenari, an acquaintance of Kanō's father and a former soldier, agreed to show him kata, but not to teach him. The caretaker of Jirosaku's second house, Katagiri Ryuji, also knew jujutsu, but would not teach it as he believed it was no longer of practical use. Another frequent visitor, Imai Genshiro of Kyūshin-ryū (扱心流) school of jujutsu, also refused. Several years passed before he finally found a willing teacher.</p>
+                <p>In 1877, as a student at the Tokyo-Kaisei school (soon to become part of the newly founded Tokyo Imperial University), Kano learned that many jujutsu teachers had been forced to pursue alternative careers, frequently opening Seikotsu-in (整骨院, traditional osteopathy practices).[14] After inquiring at a number of these, Kano was referred to Fukuda Hachinosuke (c. 1828–1880), a teacher of the Tenjin Shin'yō-ryū (天神真楊流) of jujutsu, who had a small nine mat dōjō where he taught five students. Fukuda is said to have emphasized technique over formal exercise, sowing the seeds of Kano's emphasis on randori (乱取り, randori, free practice) in judo.</p>
+                <p>On Fukuda's death in 1880, Kano, who had become his keenest and most able student in both randori and kata (形, kata, pre-arranged forms), was given the densho (伝書, scrolls) of the Fukuda dōjō. Kano chose to continue his studies at another Tenjin Shin'yō-ryū school, that of Iso Masatomo (c. 1820–1881). Iso placed more emphasis on the practice of "kata", and entrusted randori instruction to assistants, increasingly to Kano. Iso died in June 1881 and Kano went on to study at the dōjō of Iikubo Tsunetoshi (1835–1889) of Kitō-ryū (起倒流). Like Fukuda, Iikubo placed much emphasis on randori, with Kitō-ryū having a greater focus on nage-waza (投げ技, throwing techniques).</p>
+            </div>
+            <div class="col-md-4 col-sm-12">
+                <img src="Img/judo/jigoro kano1.jpg" alt="" class="imgfluid w-100 h-50">
+                <img src="Img/judo/jigoro-kano2.jpg" alt="" class="imgfluid w-100 h-50 mt-3">
+            </div>
+        </div>
+    </div> <hr>
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12 col-sm-12">
+                <h4>Founding of the Kodokan</h4>
+                <p>In February 1882, Kano founded a school and dōjō at the Eisho-ji (永昌寺), a Buddhist temple in what was then the Shitaya ward of Tokyo (now the Higashi Ueno district of Taitō ward). Iikubo, Kano's Kitō-ryū instructor, attended the dōjō three days a week to help teach and, although two years would pass before the temple would be called by the name Kōdōkan (講道館, Kodokan, "place for expounding the way"), and Kano had not yet received his Menkyo (免許, certificate of mastery) in Kitō-ryū, this is now regarded as the Kodokan founding.</p>
+                <p>The Eisho-ji dōjō was originally shoin. It was a relatively small affair, consisting of a 12 jo (214 sq ft) training area. Kano took in resident and non-resident students, the first two being Tomita Tsunejirō and Shiro Saigo. In August, the following year, the pair were granted shodan (初段, first rank) grades, the first that had been awarded in any martial art.</p>
+                <h4>Judo versus Jujutsu</h4>
+                <p>Central to Kano's vision for judo were the principles of seiryoku zen'yō (精力善用, maximum efficiency, minimum effort) and jita kyōei (自他共栄, mutual welfare and benefit). He illustrated the application of seiryoku zen'yō with the concept of jū yoku gō o seisu (柔能く剛を制す - 柔能剛制, softness controls hardness). <br> jūdō (柔道, "Judo"), written in kanji
+                    In short, resisting a more powerful opponent will result in your defeat, whilst adjusting to and evading your opponent's attack will cause him to lose his balance, his power will be reduced, and you will defeat him. This can apply whatever the relative values of power, thus making it possible for weaker opponents to beat significantly stronger ones. This is the theory of ju yoku go o seisu. <br>                  
+                    Kano realised that seiryoku zen'yō, initially conceived as a jujutsu concept, had a wider philosophical application. Coupled with the Confucianist-influenced jita kyōei, the wider application shaped the development of judo from a bujutsu (武術, martial art) to a budō (武道, martial way). Kano rejected techniques that did not conform to these principles and emphasised the importance of efficiency in the execution of techniques. He was convinced that practice of jujutsu while conforming to these ideals was a route to self-improvement and the betterment of society in general. He was, however, acutely conscious of the Japanese public's negative perception of jujutsu. <br>At the time a few bujitsu (martial arts) experts still existed but bujitsu was almost abandoned by the nation at large. Even if I wanted to teach jujitsu most people had now stopped thinking about it. So I thought it better to teach under a different name principally because my objectives were much wider than jujitsu.<br>
+                    Kano believed that "jūjutsu" was insufficient to describe his art: although jutsu (術) means "art" or "means", it implies a method consisting of a collection of physical techniques. Accordingly, he changed the second character to dō (道), meaning "way", "road" or "path", which implies a more philosophical context than jutsu and has a common origin with the Chinese concept of tao. Thus Kano renamed it Jūdō (柔道, judo).</p>
+                    <hr>
+                    <h3>Judo rules</h3>
+                    <h4>In practice and competition</h4>
+                    <h5>Safety</h5>
+                    <p>
+                        <ul>
+                            <li>Intentionally injuring an opponent is not permitted.</li>
+                            <li>Punching, kicking, and other strikes are not allowed.</li>
+                            <li>Touching the opponent's face is not allowed.</li>
+                            <li>Attacking joints other than the elbow is not allowed.</li>
+                            <li>Long hair touch for boys are not permitted.</li>
+                            <li>The technique known as kawazu gake is not permitted.</li>
+                            <li>The technique known as kani basami is not permitted.</li>
+                            <li>Wearing any hard or metallic object during competition is not permitted. The penalty for violating this rule is hansoku make (see Penalties, below).</li>
+                            <li> This includes wedding rings, earrings, hard-plastic protective gear, hair-ties with metal parts, wristwatches, and even press-studs on underpants. For female judokas, hair with longer length must be tied either in a pony tail or a bun (neat or messy). A plain white T-shirt must be worn.</li>
+                        </ul>
+                    </p>
+                    <p>
+                        <h5>Etiquette</h5>
+                        <ul>
+                            <li>Contestants must bow before stepping onto the mat.</li>
+                            <li>Contestants must bow to each other before and after practice or competition.</li>
+                            <li>Inappropriate behaviour, such as foul language and bodily gestures, is not tolerated.</li>
+                        </ul>
+                    </p>
+                    <p>
+                        <h4>In competition only</h4>
+                        <ul>
+                            <li>Stalling is not permitted.</li>
+                            <li>Using a defensive posture is not permitted.</li>
+                            <li>It is required to bow to the competition area.</li>
+                            <li>False attacks are not permitted. They are considered attempts to circumvent the prohibition against noncombativity.</li>
+                            <li>Disregarding the orders of the judge is prohibited.</li>
+                        </ul>
+                    </p>
+                    <p>
+                        <h5>Scoring</h5>
+                        The scoring rules in use starting in 2017 are as follows:
+                        <ul>
+                            <li>Awarding of ippon (一本) 'One full point'. Award of ippon decides the winner and ends the match. Ippon is awarded for a successful throw performed with control and power, or for a pin lasting 20 seconds. Submission by strangulation or application of an arm lock at the elbow joint also results in ippon.</li>
+                            <li>Awarding of waza-ari (技あり). 'One half point'. Awarded for a successful throw lacking one of the above elements, or for a pin lasting 10 to 19 seconds. With the exception of 2017, two waza-ari also wins the match (announced as “waza-ari awasete ippon,” or “waza-ari together [with a previously-earned waza-ari] makes ippon”).</li>
+                        The following rules are no longer in use:
+                            <li>Awarding of yuko (有効). One score of waza-ari was considered greater than any number of yuko scores. From 2008 to 2016, yuko was the smallest score that can be awarded. Yuko was removed from IJF competition in 2017.</li>
+                            <li>Awarding of koka (効果). Was introduced in 1975 and removed from IJF competition at the end of 2008. Any number of koka scores does not add up to a yuko score.</li>
+                            
+                        </ul>
+                    </p>
+                    <p>
+                        <h5>Penalties</h5>
+                        Two types of penalties may be awarded. A shido (指導; literally "guidance" or "instruction") is awarded for minor rule infringements. A shido can also be awarded for a prolonged period of non-aggression. Recent rule changes allow for the first shidos to result in only warnings. If there is a tie, the number of shidos for each player are not used to determine the winner. After three shidos are given, the victory is given to the opponent. This is an indirect hansoku-make, and does not result in expulsion from the tournament. The penalty of hansoku make (反則負け; literally "foul-play loss") is awarded for major rule infringements, or for accumulating three shidos. If hansoku make is awarded for a major rule infringement, it results not just in loss of the match, but in expulsion from the tournament. Note: Prior to 2017, the 4th shido was hansoku make.
+                    </p>
+                    <p>
+                        <h5>Competition area</h5>
+                        The competition area must be padded with tatami. The minimum allowable size is 14 m × 14 m (46 ft × 46 ft). The match takes place in an 8 m × 8 m (26 ft × 26 ft) to 10 m × 10 m (33 ft × 33 ft) zone within this larger area. The surrounding space acts as a safety zone. When two competition areas are side by side, there must be at least a 3-meter (10-foot) safety zone between them.
+                    </p>
+                    <p>
+                        <h5>Grips</h5>
+                        Rules related to grips are primarily motivated by the desire to avoid stalling, to avoid providing undue advantage, or to reduce the chance of injury.
+                        <ul>
+                            <li>Deliberately avoiding gripping is not permitted.</li>
+                            <li>In a standing position, it is not permitted to take any grip other than a "normal" grip for more than three to five seconds without attacking. A "normal" grip is one where the right hand grips some part of the left/right hand side of the opponent's jacket (and the left hand grips some part of the right hand side of the opponent's jacket, vice versa.) A non-normal grip may involve grabbing the belt, or the trousers, or the wrong side of the jacket. (A non-"standard" grip is one that does not involve the traditional sleeve/collar grip. There are no time-limits related to non-"standard" grips as long as they are not non-"normal".)</li>
+                            <li>A "pistol grip" on the opponent's sleeve is permitted if immediate attack is launched.</li>
+                            <li>It is not permitted to insert the fingers inside the opponent's sleeve opening or trousers opening at any time. You are permitted to insert your fingers inside your own gi openings.</li>
+                            <li>Biting the opponent's gi is prohibited, as it grants another gripping point.</li>
+                            <li>Since 2010, it is not permitted to grab the legs or trousers, initially, during tachi-waza (standing techniques). As of 9 February 2013 it is no longer permissible to touch the legs of the opponent whatsoever during tachi-waza. Furthermore, it is no longer permissible to break an opponent's grip with two hands.</li>
+                        </ul>
+                    </p>
+                    <p>
+                        <h5>Age</h5>
+                        Judo competitions typically have some safety-related rules related to age: chokes are prohibited under a certain age (typically 13), and arm bars are prohibited under a certain age (typically 16). <br> The duration of matches is also dependent on the age of the competitors. Match length is typically three minutes for children, five minutes for teenagers and young adults, and three minutes for 'masters' (adults thirty years of age or older).
+                    </p>
+                    <p>
+                        <h5>Gi</h5>
+                        Rules related to the gi are primarily related either to safety or to preventing contestants from wearing gis that prevent their opponent from being able to get a grip on them.
+                        <ul>                            
+                            <li>The sleeves of the jacket are not allowed to be too short: they must extend down to no more than 5 cm (2.0 in) above the wrists with the arms extended in front of the body.</li>
+                            <li>The legs of the trousers are not allowed to be too short: they must extend down to no more than 5 cm (2.0 in) above the ankle.</li>
+                            <li>Excessive advertising on the gi must be avoided, and may result in a forced loss if an appropriate gi can't be found.</li>
+                        </ul>
+                    </p>
+                    <p>
+                        <h5>Medical treatment, illness, and injury</h5>
+                        The official International Judo Federation (IJF) rules related to the provision of medical treatment and to the proper handling of situations involving illness or injury are relatively long and involved, since the exact nature and cause of an injury may itself affect the awarding of the match, and since receiving some types of medical treatment, but not others, automatically ends the match. The latter fact makes it necessary for medical attendants at judo matches to have some understanding of this rather complex aspect of the rules of judo. The medical team is not allowed to enter the fighting area without permission from the mat judge, and if a contestant receives medical treatment he automatically forfeits the match. Nosebleeds, for example cannot be treated by the medical team; the contestant must fix it him or herself with materials provided by the medical team. Proper procedure is stuffing cotton balls up the nostrils, while applying tape around the head. If a contestant is rendered unconscious without a choking technique, and is unable to wake up, the medical team has to take immediate action and they can't wait for the contestant's consent; he or she forfeits the match automatically. A contestant can ignore any injuries he or she has, and keep fighting. This requires that it is not of any discomfort to the opponent, e.g. bleeding over an opponent can cause penalties. If the bleeding has been tried to be stopped three times, with no effect, the match is forfeited.
+                    </p>
+            </div>
+        </div>
+    </div>
+    <hr>
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12 col-sm-12">
+                <h1>World Judo Championships</h1>
+                <p>The World Judo Championships are the highest level of international judo competition, along with the Olympic judo competition. The championships are held once every year (except the years when the Olympics take place) by the International Judo Federation, and qualified judoka compete in their respective categories as representatives of their home countries. Team competitions have also been held since 1994. The men's championships began in 1956, though the format and periodicity of the championships have changed over time. The last edition of the championships took place in Budapest, Hungary in 2021.
+                </p>
+                <hr>
+                <h2>Photo Gallery</h2>
+            </div>
+        </div>
+    </div>
+    <hr>
+    <div class="container">
+        <div class="row">
+            <div class="col-md-4 col-sm-12">
+                <img src="Img/judo/g4.jpg" alt="" class="imgfluid w-100 h-100">
+            </div>
+            <div class="col-md-4 col-sm-12">
+                <img src="Img/judo/g5.jpg" alt="" class="imgfluid w-100 h-100">
+            </div>
+            <div class="col-md-4 col-sm-12">
+                <img src="Img/judo/g8.jpg" alt="" class="imgfluid w-100 h-100">
+            </div>
+        </div>
+    </div>
+    <br>
+    <div class="container">
+        <div class="row">
+            <div class="col-md-3 col-sm-12">
+                <img src="Img/judo/g1.jpg" alt="" class="imgfluid w-100 h-100">
+            </div>
+            <div class="col-md-3 col-sm-12">
+                <img src="Img/judo/g2.jpg" alt="" class="imgfluid w-100 h-100">
+            </div>
+            <div class="col-md-3 col-sm-12">
+                <img src="Img/judo/g3.jpg" alt="" class="imgfluid w-100 h-100">
+            </div>
+            <div class="col-md-3 col-sm-12">
+                <img src="Img/judo/g7.jpg" alt="" class="imgfluid w-100 h-100">
+            </div>
+        </div>
+    </div>
+    <br>
+    <hr>
+    <div class="container">
+        <h1>Top 3 Players In Judo</h1>
+        <div class="row">
+            <div class="col-md-6 col-sm-12">
+                <h3>1. Kanō Jigorō</h3>
+                <p>Fans consider Japanese martial artist Kanō Jigorō as the founder of judo. He was also dubbed as the pioneer for making Judo the first Japanese martial art to gain widespread international recognition. <br>
+                    He included the black and white belt system in Judo. And with all these, he surely deserves the top place among the greatest judo players of all time. Till now, his fans note him for his amazing contribution to the sports of Judo. <br>
+                    His admirers also note him for his mottos that state, “Mutual Welfare and Benefit” and “Maximum Efficiency with Minimum Effort”. <br>
+                    He also played a major role in the induction of judo and kendo in the Japanese public school programs during the 1910s. He is also the first Asian member of the International Olympic Committee and served his duty from 1909 to 1938. Kanō Jigorō officially represented his nation Japan in most of the Olympic Games between 1912 and 1936.</p>
+            </div>
+            <div class="col-md-6 col-sm-12">
+                <img src="Img/judo/1rank.webp" alt="" class="imgfluid w-100 h-100">
+            </div>
+        </div>
+    </div>
+    <br>
+    <div class="container">
+        <div class="row">
+            <div class="col-md-6 col-sm-12">
+                <h3>2. Yasuhiro Yamashita</h3>
+                <p>Japanese Judo Artist Yasuhiro Yamashita currently works as the instructor of several reputed organizations which includes the International Judo Federation. He also works with the All-Japan Judo Federation and the Tokai University.
+
+                    He has earned his place as one of the most successful judo competitors of all time. Besides, he also holds the second place in our list of the top 10 greatest judo players of all time.
+                    
+                    Yamashita holds the record of 203 contentious victories from October 1977 till his final match in April 1985. And during that time, he remained unbeaten. He became the youngest judo player in history to achieve the title of All-Japan Judo Championships in 1977.
+                    
+                    And, he did that at the age of just 19 years old. Yasuhiro Yamashita won the 79 World Judo Championships and received the Japanese National Prize of Honor on October 9, 1984.</p>
+            </div>
+            <div class="col-md-6 col-sm-12">
+                <img src="Img/judo/2rank.webp" alt="" class="imgfluid w-100 h-100">
+            </div>
+        </div>
+    </div>
+    <br>
+    <div class="container">
+        <div class="row">
+            <div class="col-md-6 col-sm-12">
+                <h3>3. Tadahiro Nomura</h3>
+                <p>Judi fans consider Japanese competitor Tadahiro Nomura as one of the most famous judo artists of all time. He now also holds the third place in our list of the top 10 greatest judo players of all time.
+
+                    He made his name as the first and the only Judo player to win three Olympic gold medals consecutively. And, he achieved that feat in the extra lightweight event.
+                    
+                    Nomura won his first Olympic gold while defeating Girolamo Giovinazzo at the 1996 Atlanta Summer Olympics on July 26, 1996. He then won the All-Japan Selected judo championships title in April 1996.
+                    
+                    He won the All-Japan Selected judo championships along with the World Judo Championships title in 1997. Tadahiro Nomura eventually defended his title in the Olympic event at the 2000 Summer Olympics. He then also defended it at the 2004 Athens Summer Olympics. His fans still regard him as the best judo player in the 60 Kg Class.</p>
+            </div>
+            <div class="col-md-6 col-sm-12">
+                <img src="Img/judo/3rank.webp" alt="" class="imgfluid w-100 h-100">
+            </div>
+        </div>
+    </div>
+    <br>
+        
+    <br>
+    <br>
+    <br>
+    <center><h5>There is always more to know, We will update more Information about Judo. Stay tuned with Us. Thanks</h5></center>
+<br>
+<br>
+<br>
+    <!-- Footer -->
+<div class="Container-fluid text-white" id="footer">
+    
+    <div class="row" id="footer-row">
+        <div class="col-md-4 col-sm-12 logo mt-3 mb-2 text-center">
+           <a href=""><img src="data:image/png;base64,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"></a>
+           <h1>Sports.Info</h1>
+           <h6>Information you need <br>Knowledge we have</h6>
+        </div>
+        <div class="col-md-2 col-sm-6 mb-2 mt-3 ml-3" id="visit">
+            <h3>Visit</h3>
+            <a href="#Home"><h5>Home</h5></a>
+            <a href="#Content"><h5>Sports</h5></a>
+            <a href="#about"><h5>About Us</h5></a>
+            <a href="ContactUs.html"><h5>ContactUs</h5></a>
+        </div>
+        <div class="col-md-2 col-sm-6 mb-2 mt-3 ml-3">
+            <h3>Follow Us</h3>
+            <h5>Facebook</h5>
+            <h5>Twitter</h5>
+            <h5>Youtube</h5>
+
+        </div>
+        <div class="col-md-3 col-sm-6 mb-2 mt-3 ml-3">
+            <h3>Contact</h3>
+            <h5>+923 123456789</h5>
+            <h3>Address</h3>
+            <h5>Karachi Pakistan</h5>
+            <h3>Mail Address</h3>
+            <h5>abc@gmail.com</h5>
+        </div>
+    </div>
+
+</div>
+<div class="Container-fluid text-center text-white" id="copyright">
+<div class="container" id="cpyrght">
+    <div class="row">
+        <div class="col-md-12 col-sm-12">
+            <h5>&copy; CopyRight Reserved 2022</h5>
+        </div>
+    </div>
+</div>
+</div>
+<!-- Footer -->
+</body>
+</html>

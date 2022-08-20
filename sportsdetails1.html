@@ -1,0 +1,350 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>Page Title</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1, shrink-to-fit=no'>
+    <link rel='stylesheet' type='text/css' media='screen' href='main.css'>
+    <script src='main.js'></script>
+    <!-- Latest compiled and minified CSS -->
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/css/bootstrap.min.css">
+
+<!-- jQuery library -->
+<script src="https://cdn.jsdelivr.net/npm/jquery@3.6.0/dist/jquery.slim.min.js"></script>
+
+<!-- Popper JS -->
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"></script>
+
+<!-- Latest compiled JavaScript -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/js/bootstrap.bundle.min.js"></script>
+<link rel="stylesheet" href="css/sportsdetails1.css">
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+
+
+
+</head>
+<body class="bg-white">
+    <div class="container" id="Home">
+        <nav class="navbar navbar-expand-md navbar-dark bg-dark fixed-top" >
+           <a href="" class="navbar-brand " id="logo">
+               <img src="data:image/png;base64,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">
+           </a>
+           <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarresponsive">
+               <span class="navbar-toggler-icon"></span>
+           </button>
+           <div class="collapse navbar-collapse" id="navbarresponsive">
+               <ul class="navbar-nav ml-auto">
+                   <li class="nav-item">
+                    <a href="SportsInfo.html" class="nav-link">Home</a>
+                   </li>
+                   <li class="dropdown text-white">
+                       <a href="" class="nav-link dropdown-toggle" role="button"data-toggle="dropdown">Sports</a>
+                       <div class="dropdown-menu bg-dark">
+                           <a href="swimmingdetails.html" class="dropdown-item">Swimming</a>
+                           <a href="sportsdetails1.html" class="dropdown-item">Cricket</a>
+                           <a href="golf.html" class="dropdown-item">Golf</a>
+                           <a href="volleyball.html" class="dropdown-item">Volley Ball</a>
+                           <a href="footballdetails.html" class="dropdown-item">Foot Ball</a>
+                           <a href="tennisdetails.html" class="dropdown-item">Tennis</a>
+                           <a href="judo.html" class="dropdown-item">Judo</a>
+                           <a href="Chess.html" class="dropdown-item">Chess</a>
+                           <a href="badminton.html" class="dropdown-item">Badminton</a>
+                           <a href="billiardsdetails.html" class="dropdown-item">Billards</a>
+                           <a href="motorcycledetails.html" class="dropdown-item">Motor Cycle Racing</a>
+                       </div>
+                   </li>
+                   <li class="nav-item">
+                       <a href="#about" class="nav-link">About Us</a>
+                   </li>
+                   <li class="nav-item">
+                       <a href="contactus.html" class="nav-link">Contact Us</a>
+                   </li>
+                   <!-- <li class="nav-item">
+                       <a href="" class="nav-link">Log in</a>
+                   </li> -->
+               </ul>
+           </div>
+        </nav>
+        <div>
+    <!-- header  -->
+
+    <div class="container-fluid text-center">
+        
+    </div>
+
+
+
+
+
+    <!-- content details  -->
+
+    <div class="container-fluid bgImage text-center">
+        <div class="container" style="background-color: transparent;">
+            <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAGQAAABkCAYAAABw4pVUAAAABmJLR0QA/wD/AP+gvaeTAAAKtklEQVR4nO2dbYwcZR3Af/+Znd276xu00vfSIgItF4MQEvmi0GiVFiikeqLRRAmQAB/8ZAlIog0mmgDVBEOIgLFqaqFL30yw1FTuSnuGajkipS8xFETK2dJrufbed3bn74fdvdu9nb2d2dvZnXLz+3K52eeZ55n53f+Z5232ICIiIuKiQRpdgU8j857S+1CeAN4F7j69Xt73mjcSUmPmPan3A79h7N5+qMrKjx+WE17yG4HVbAoy9wl9kGIZAEtEeG3ek3qFl3NEEVIjFm7UJRmH94BYmST/BW6p1HxFEVIjnBQmE9/Py4GOSpESCakRpx6V/wg8UiFZRSmRkBpy/Wtrnp7V0/VihWSXA/vmPqFXun0YCakRbW1tcWX21s++/ctvz+5u76iQfIkI7W5Sood6DWhra4v39ceTwNr8sQ+W39txbuHKWypkLekSRxEySdxkACw9/ttb5nTv218h+xKBHYUHIiGToJyMPJcff/5LFaUI17BBR7vKZm2rOHWoJCPPrJ6upXZizv6hGcuWun2uwuMDP5b2/O+RkCpYvXp1IpWavg24w0v6WT1dS4daFm0fmb54ReFxUTaeXi+PFR6Lmiyf5HtTCrf7yNZ1xeGN9+fGKZo79otTD8uPxieMelk+8NpMjaNLndSqPXuS5wAWPqXLM0rs9Hp5xy1xJMQjtZDhhUiIB+olAyIhFamnDIiETEi9ZUAkpCyNkAGREFcaJQMiISU0UgZEQopotAyIhIwSBhkQCQHCIwOiuayqZAi8GYQMmOJCqpVhGBqIjNz5pyaTkfHKK3/6JKh6TUkhYZWRK2dqEWYZubKmDmGXAeX3oYYaPbpuAersJrvpDCAN9BUk6WV0ZU4GQFMAf3jVOLtlr3cZCgfTdurre/cmz9ek4h646CJED6+dh2G8BlxbTf6nk/F9uw9aN1dKV+/IyHNRbXKYrAyAL7Zmlp09T8e7H5nLyqVplAy4iITUQkaem1qdslIaKQMuEiG1lJHHTUqjZcBFICQIGXkKpYRBBoRciB5dtwChA1hRMTFARmBEsn1Hj92Vm1qdZX398uKR9zLf2rPnpd6qK1sjQtvL8h0ZIwInrayUS9IwN+OnuK3SuvPuaupZa0I5uehfhgEn41kZACnflxX3myEoQiekOhkW5APCBC7zFR2AWj4zBEaoRurVN1O5301gYQoSOlGuUkRCIyQ0EVKdjHipjGafMgA0PEJCESGByhgwoCcGzQ7MTZerQWiENDxCgpVhQreVzdNrZn+6EwmBesiIjb2NYSnEyzZnUS8r8GaqUEZMYbE90ahrakdI8DKsYhlL7GyElGfqCgmhDJiqQkIqA0IkpG7d3tyyaztwjacM9ZMBwjFvCYOnLkL08Np5qLOXMMpAOzH0mx4TB07gs70hbqYA7cTU1bL8z32V09aHQIVEMvwTmJBIRnUE0svSo+sWYBj7CKUM9kP81jDKgAAiJIqMyVHTXlZYZKQz4DiQcXIHBCxDOmMJJ9QyoIYR0kgZGUcYGoHhFKRsQUtOof8csWOrrlxVvy2h1VITIY0a9KVs6BsUhlNQ9lKEg/296VXL7wx3ZOSZtJBGyNCYcn5AGBgqvgRFU8axkRPWoQHb6HUs0k7cOJM+FDPjf5sxf/5WSX7KI6QRMmxRzp43xp4PgJHWvmnt8kbTca7oPXb8c2rbRacym5qYefXVGYF2VDdbQ0NbZPfuEb/XWw+qFtIIGSmUsxcMnAIZ0w5xoPkNaRXlUoDB7m5GenpKTjlr+XKM+Og61PvAI4lt27Z6qnsdqUpIIx7gaUM50zsmw0iTmf0y/5IzckNh9vTAAH0nSv8RQcuiRSTmzBl3Ifq7+NDQg2GKFt8Dw0YM+jSmnD0vYzIc7Nl/lBIZALGWFgyzdIdsur+/tDyRe+yWlt26enXC07XUAV9CGjVr2zcopHO7EkWU2S/xjvRTIiOXAHPatJLD6cFB92uClamWlt9rSLbVehbSqOmQjAN9Q2NJZxwyD0iPXD9R0TEXIY5to+ly24C421637nuVLqkeeBLSyPWM/kFAs3+8MZu+xN+d6yoVH2tudj2eGR4un0nkKV27dkalcwdNRSGNnigcSo21JNPb5R8gFW+akXB/JGRSqbJ5FObalvXdSucOmgmF+I8Mo6YyUjZk8jva0RHr39LqpRqGZSFG6aU5EwgBULjXy/mDpKwQ/5Hhsgt9khOFqcxYdJj/k7dQne+pLmSljGf8gNGFG7StbZbXMoLAVYj/QV/tZQAUPoObTxi+3m5yjZDCEaU7xrDqjX7KqTUltQ6LDKBoRG5+4vP1O5exiFYWggmLfJVTY4rWQ7S97Qt8QCeG2UIMMBUMzd5kU7OpTXLHNPcAj0H+Ok1gkQ1NtV9cEp9DWJHSYYWUzsuX4KjO9FdSbRkVou0bYgwcPYgt1W08HpXh8ldYpQwRBQTBOWSd5C2QVV6r4xYN6iJpPEbxV3TUndG/O1m5oeyoqSL5ZqqGMgBMQxDRN5unW1+VEZ+b2VyiwS1qxuOIfOyrnBpT3BAssDezxIaFaZhnw2cy2TdaZ2ZgupO94VauGcsTIxsZAayBJ+JO53Aq9pXZNybPY5qH/VyYW4SIy3OlJJ/IcT/l1JriNfUWfQZH7xk7MMFDUMm+9WqWmQWa/O6QA4kmXXPlqmQfgHXppW/b586dVtV5XjK7jTncusLjeK85mfT8j4SDoChCZMXON0GOeMopZG9yMDL2kR4s2qojzz1nq+omL5k1nXaNkEpCFJ7xWsGgKO27iP5qUmfMv0aWv/dWVTJuk+v+OjD+A0f1WcB92raAclMkBQtUbvQmmppe8FrJoCgVssLa5DlKxpMBus1iGYv9NVNg3e4mA6B5+/YPEHm8YjXKTLWbTU1l84jqD2Xz5gteKxoUJUJEkhngMZe0lcnI6MwsBj5lyOukB2+V1qTLStIY8Z6ejQqvT5TGbe1DLGuiJmtTfPv2P3qsaKC4Drekdccu4CXfZzMLbr7iLzLMTNnIKKpbR0c60dR0B/BWuTS2y+pguSl5YFd8cPABrxUNmvLj3xQPkP0f4P7ONjo5y4SdtAIOYDpr/OwolM2bL8Tj8a8J7B3/WWZ42HUhymXRShWejRvGNy6KNXW5fmcvDt8n+wWT3hCKxyiZSgOxXDNVxfZO2bKlxzKMWxH5CQUP+lSv+xykNbNoRuRDdZw1Tdu2PSTJpN8vRgmUCWeI5PM7O0B+wNhjujKFY68JL1U7vTZT5ZBkMpN4+eWfpW37KhH5tYicts+X7oUz4nHM7KLVO6J6X3zGjKubdux4tdpyg8TTwr4euetR4OeezvhhHIZyp11sQ4tbuxXMLnRtazMvnDnznczQ0Jc1k1mqqjHDNAfNRKLLuuyy51u2bz9Zy/KCwPNOCz1y1wbgpxUTdlvQnwu8BWmYMT5M5HWI3VapNzVV8TypLa07NwD3ABMvuxX2tEqarFwzFckoi69VBmnduQnRu4DSvZqjZyz7UA/1m0thwffORbl2119ISyvoK64JXB/q2onpRM2UB6rfbK0Ix+68FzU2gI4te14w4VRuEnmmA/Pt/WCtiWR4o+qXPkVQuXbXC8yMXQW6HuQjYNwzRD+OZPijdq+06QaDI103Mxx7iFOxtcQY5BJzudy05XStyoiIiIiICBX/Byx8KXvAGL7xAAAAAElFTkSuQmCC">
+        </div>
+
+        
+
+        <div class="container my-4">
+            <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Sequi est expedita rem dolorum facilis eveniet! Nobis dolore velit vel distinctio obcaecati animi minima ipsum iusto! Dolore magni dolor ea assumenda?</p>
+        </div>
+
+        <!-- img start -->
+
+        <div class="container">
+            <img src="" class="mx-auto d-block" style="width:100%"> 
+        </div>
+       
+        <!-- img end  -->
+
+    </div>
+    <div class="container-fluid"><hr style="margin-top:-50px; height: 100px;"></div>
+
+    <div class="container my-4 mt-1" style="margin-top:-100px;">
+        <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Cupiditate expedita labore velit! Vel consequuntur ducimus in omnis, a est. Deserunt architecto illum non! Atque esse modi consequuntur blanditiis neque quo!</p>
+    </div>
+
+    <!-- cards start  -->
+
+    <div class="container text-center  d-flex" id="cards">
+        <div class="container-fluid row">
+        <div class="card border-0 bg-transparent col-md-4" style="width:400px">
+            <a href="#" data-toggle="popover" title="Popover Header" data-content="Some content inside the popover"><img class="card-img-top" src="Img/images/" alt="Card image" style="width:100%"></a>
+          <div class="card-body">
+            <h4 class="card-title">BABAR AZAM</h4>
+            <p class="card-text"></p>
+            <a href="#" class="btn btn-danger stretched-link">See Profile</a>
+          </div>
+        </div>
+
+        <h2></h2>
+        <p></p>
+        <div class="card border-0 bg-transparent col-md-4" style="width:400px">
+          <img class="card-img-top" src="../images/brettlee.jpg" alt="Card image" style="width:100%">
+          <div class="card-body">
+            <h4 class="card-title">BRETT LEE</h4>
+            <p class="card-text"></p>
+            <a href="#" class="btn btn-danger stretched-link">See Profile</a>
+          </div>
+        </div>
+
+        <h2></h2>
+        <p></p>
+        <div class="card border-0 bg-transparent col-md-4" style="width:400px">
+          <img class="card-img-top" src="../images/viratkohli.jpg" alt="Card image" style="width:100%">
+          <div class="card-body">
+            <h4 class="card-title">VIRAT KOHLI</h4>
+            <p class="card-text"></p>
+            <a href="#" class="btn btn-danger stretched-link">See Profile</a>
+          </div>
+        </div>
+        </div>
+    </div>
+
+    <!-- cards end -->
+
+    <div class="container-fluid"><hr style="margin-top:40px; height: 100px;"></div>
+
+    <!-- players section start  -->
+
+    <section class="about us">
+        <div class="container">
+            <h1 class="text-center" id="title1">AZAM STATS</h1>
+            <div class="row">   
+                <div class="col-md-6">
+                    <p class="para1">Babar Azam, is a Pakistani international cricketer and captain of the Pakistan national cricket team in all formats. Regarded as one of the finest batsmen in contemporary world cricket, he captains Central Punjab in domestic cricket and Karachi Kings in the PSL.</p>
+                    <ul>    
+                        <li>First Cousin To Umer and Kamran Akmal</li>
+                        <li>Babar Azan: Hattrick King</li>
+                        <li>Captain Of Under-19 World Cup 2012</li>                       
+                    </ul>
+
+                </div>
+
+                <div class="col-md-6">
+                    <img src="../images/babarazamstats.webp" class="img-fluid" alt="" width="500">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    
+
+
+    <section class="about us">
+        <div class="container">
+            <h1 class="text-center" id="title1">LEE'S STATS</h1>
+            <div class="row">   
+                <div class="col-md-6">
+
+                    <p class="para1">Brett Lee is an Australian former international cricketer, who played all three formats of the game. During his international career, Lee was recognised as one of the fastest bowlers in the world</p>
+                    <ul>    
+                        <li>Brett Lee is the first player to win the “Don Bradman Young Player of the Year” award in 2000. The young seamer took 42 wickets in 7 matches in that season. </li>
+                        <li>Lee had a great World Cup in 2003. He was the 2nd highest wicket-taker with 22 wickets in 10 games, including a hat-trick against Kenya. </li>
+                        <li>Brett Lee is the first player to claim a hat-trick in T20 Internationals, he made the record against Bangladesh in the 2007 T20 World Cup. </li>
+                 
+                    </ul>
+
+                </div>
+
+                <div class="col-md-6">
+                    <img src="../images/leesstats.webp" class="img-fluid" alt="" width="500">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    
+
+
+    <section class="about us">
+        <div class="container">
+            <h1 class="text-center" id="title1">KOHLI'S STATS</h1>
+            <div class="row">   
+                <div class="col-md-6">
+                    <p class="para1">Virat Kohli is an Indian international cricketer and former captain of the India national cricket team. He plays for Delhi in domestic cricket and Royal Challengers Bangalore in the Indian Premier League as a right-handed batsman.</p>
+                    <ul>    
+                        <li> Most centuries in a 5 match ODI series (3).</li>
+                        <li>Kohli is smacked the fastest ODI hundred by an Indian- 100 off 52 balls against Australia in 2013.</li>
+                        <li>Virat Kohli owns many records in One Day cricket- i) quickest batsman to score 8000, 9000, 10000, 11000 & 12000 ODI runs. 
+                        </li>
+                       
+                    </ul>
+
+                </div>
+
+                <div class="col-md-6">
+                    <img src="../images/kohlistats.jpg" class="img-fluid" alt="" width="500">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- players section end  -->
+
+
+    <!-- cricket rules and regulations start -->
+
+
+    <!-- <div class="container my-4 mt-1 text-center">
+        <p>CRICKET IS WIDELY PLAYED IN MANY </p>
+    </div> -->
+
+    <section>
+        <div class="container">
+            <h1 id="title1" class="text-center">Rule and regulations</h1>
+            <div class="row">
+                <div class="col-md-6">
+                    <ul>
+                        <li>Cricket is played between two teams each made up of eleven players. (Sometime in junior competitions you will find 8 player teams).</li>
+                        <li>Games comprise of at least one innings where each team will take turns in batting and fielding/bowling.</li>
+                        <li>The fielding team will have a bowler bowl the ball to the batsman who tries to hit the ball with their bat.</li>
+                        <li>The fielding team must get 10 batsmen out before they can change over and start batting.</li>
+                        <li>The aim of the game is to score as many runs as possible before the fielding team takes 10 wickets. The team with the most runs wins.</li>
+                        <li>When the ball hits the fence of the
+                            boundary, it means four runs</li>
+                            <li>Overthrows could
+                                bring extra runs</li>
+                            <li>Wasting any time on the field is penalized</li>
+                            <li>Ruling of the umpire is final</li>
+
+                    </ul>
+                </div>  
+
+                <div class="col-md-6">
+                    <img src="../images/cricketbat.jpg" class="img-fluid" alt="" width="450">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- cricket rules and regulations end -->
+
+    <!-- video start -->
+
+    <div class="container">
+        <video src="" class="mx-auto d-block"></video> 
+    </div>
+
+    <!-- video end -->
+    
+    <div class="container my-4 mt-1">
+        <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Cupiditate expedita labore velit! Vel consequuntur ducimus in omnis, a est. Deserunt architecto illum non! Atque esse modi consequuntur blanditiis neque quo!</p>
+    </div>
+
+
+    <div class="container-fluid"><hr style="margin-top:150px; height: 100px;"></div>
+
+
+    <!-- pagination  -->
+
+    <div class="container">
+        <ul class="pagination bg-transparent justify-content-center">
+            <li class="page-item"><a class="page-link" href="javascript:void(0);">Previous</a></li>
+            <li class="page-item"><a class="page-link" href="javascript:void(0);">1</a></li>
+            <li class="page-item"><a class="page-link" href="javascript:void(0);">2</a></li>
+            <li class="page-item"><a class="page-link" href="javascript:void(0);">Next</a></li>
+        </ul>
+    </div>
+
+    <!-- icons -->
+    <div class="container footer bg-transparent">
+
+       <div class="container text-center">
+         <a href="#" class="fa fa-facebook"></a>
+         <a href="#" class="fa fa-twitter"></a>
+         <a href="#" class="fa fa-google"></a>
+       </div>
+    </div>
+
+    <!-- Footer -->
+<div class="Container-fluid text-white" id="footer">
+    
+    <div class="row" id="footer-row">
+        <div class="col-md-4 col-sm-12 logo mt-3 mb-2 text-center">
+           <a href=""><img src="data:image/png;base64,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"></a>
+           <h1>Sports.Info</h1>
+           <h6>Information you need <br>Knowledge we have</h6>
+        </div>
+        <div class="col-md-2 col-sm-6 mb-2 mt-3 ml-3" id="visit">
+            <h3>Visit</h3>
+            <a href="#Home"><h5>Home</h5></a>
+            <a href="#Content"><h5>Sports</h5></a>
+            <a href="#about"><h5>About Us</h5></a>
+            <a href="contactus.html"><h5>ContactUs</h5></a>
+        </div>
+        <div class="col-md-2 col-sm-6 mb-2 mt-3 ml-3">
+            <h3>Follow Us</h3>
+            <h5>Facebook</h5>
+            <h5>Twitter</h5>
+            <h5>Youtube</h5>
+
+        </div>
+        <div class="col-md-3 col-sm-6 mb-2 mt-3 ml-3">
+            <h3>Contact</h3>
+            <h5>+923 123456789</h5>
+            <h3>Address</h3>
+            <h5>Karachi Pakistan</h5>
+            <h3>Mail Address</h3>
+            <h5>abc@gmail.com</h5>
+        </div>
+    </div>
+
+</div>
+<div class="Container-fluid text-center text-white" id="copyright">
+<div class="container" id="cpyrght">
+    <div class="row">
+        <div class="col-md-12 col-sm-12">
+            <h5>&copy; CopyRight Reserved 2022</h5>
+        </div>
+    </div>
+</div>
+</div>
+<!-- Footer -->
+
+  
+</body>
+</html>

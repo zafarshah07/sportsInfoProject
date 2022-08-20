@@ -1,0 +1,334 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>Page Title</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1, shrink-to-fit=no'>
+    <link rel='stylesheet' type='text/css' media='screen' href='main.css'>
+    <script src='main.js'></script>
+    <!-- Latest compiled and minified CSS -->
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/css/bootstrap.min.css">
+
+<!-- jQuery library -->
+<script src="https://cdn.jsdelivr.net/npm/jquery@3.6.0/dist/jquery.slim.min.js"></script>
+
+<!-- Popper JS -->
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"></script>
+
+<!-- Latest compiled JavaScript -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/js/bootstrap.bundle.min.js"></script>
+<link rel="stylesheet" href="css/tennisdetails.css">
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+
+
+
+</head>
+<body class="bg-white">
+    <div class="container" id="Home">
+        <nav class="navbar navbar-expand-md navbar-dark bg-dark fixed-top" >
+           <a href="" class="navbar-brand " id="logo">
+               <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAEAAAABACAYAAACqaXHeAAAABmJLR0QA/wD/AP+gvaeTAAANfklEQVR4nO2aeWDV1ZXHP/f3FkJeViDshAAJEYiALIobgwaQTRBCpii12MGiVqUD2LFORTOKjlBahNaZYkWFVkUCArJEIAFEVhGGLWGHlEA2kheSl+Xtt3+8vF9ekrdGmH+a71/3nnvu75x77nLOPfcHrWhFK1rRila04p8VwrMyZsL0d6VgroTlOdvW/7ZR26S0JCnFOqDnHdLFDtxAinwpZB6SQ1qHOLhjR6bxDskDQOtZkYKXAYOAl4FGBpCImcDgO6kMEIeQgwU8gQCHVjpGT0zfI6T80mYQa/dmZlbfboGKZ0XCCqAa5IqmjMIpNiEovd0KBIAG5Ggp+Iu2Vl5LnTj9nVGPP9nhdgoQgVkakJGRoRw9eiE6GN5BgwboZz//85nlIvK3JWbRzikb2noYICmqMX+d2Uy5sYL3/7SSy1fy/X3aiBBv2qtv/nnv3r32UPT3hpAMECyklGkmOytOlNO11ouKD3UCg7Y5vba2jllzXubWrUoARj86koED+rNl+04uXr7ShFscQOGp7C2Z136MrrfVAFLKOODjKhuTfigDm7M5T/s2MMzHIl61+jPWZm4CIDYmmo9XLifCYADg+IlTfPjxX5uujgqhMGPXlvU7W6qzpqUd3Uh9fNrw3okpAy/kneykKEqOxcHQo2Vg9TJ4gORoiNA1p5feLOO9pStwOFwdn5s9i5T+d6ntXTp3YuK4McRER3HydB4OhwOgLZIZffr2u3rl4tlTLdFfCcziG2MmpD8tnMphIWTWtm+ydwNdz9wCi8M7v06BuDDvbZu3ZmG12gBI6BnPhMdSm/EIIZg8aRz/8/5iEuJ7qJ+ViDVjJqQ/3ZIxtNgAj46fPl4Kucr9jerqGn2pGcrMvvt0aguKl01nsVrJ2rlbrT+ZPhVF8a1afI9uLFvyNnen9HeThBRy1ZhJaRNCHUeLDDBu3IwEReFzQAdwV99Epj0xkXyT/35d2nqn79t/CJPJ5eINUTG0TR5BUR1I6Z0fICLCwHtvvc7dA/q5STopxeejJ6b1DmUsIRsgPT1dY9c6vgBiALp17cKijP/EqQ2jwuq7n0ZAbBvvbfv2H1bLKQ+Mosqp5ZQR9pXA36vB4cMQer2Otxa+SnyPbm5SNIgvhw6d4+WU8Y6QDWCscb6IlCMAdDodr786j+ioSIwW//1i9N5dTm1dHcdPnFTrfYfcr5bNDjhXCftL4HoNeLNDRISBhb+ZTxu93k0a1q6zcW5TvoyMDGXU+GndaaJGSAYYPz49Tgjxlrv+7DMzSezTC4BbfmYfXAbwhlOnc9XDL6p9HB3jezXjMTsg9xYcKIGSuubfSOgZz+xnZqp1CW8+9ti0Lp48+78/k6VVlILRE6av8qSHZACbxjkfiAZIiO/BlEnj1DZvAY8non0Y4EzuObUcn5yCEL5Dkxo7nDDCD2XN5U2ZNI7evRLc1UinRrzirgwdOkeHwOVWBLPGTJ7R1d0WtAHGjp3aESlecNfnzP4ZGk1DGBHIAOFeIj+AM3kNBuie1M87UxOUW+BAKVwxNWwLRVF41nMVCPFc6tSp7QGOHfvQJgXfulml3fYTN5+2/tTcCsKvdM+4pldCPMOGDFLrduk78AHXpmvrJeSSUnLl6t/VeqeewR/gTgkXq+BGjUTvtHBf1zCGDRlEYp9eXLp8FcAgrJqngD8CKE6+kIJHAVCUfwWWASggpgUafFNMnjiu0VK1+gh83AjTePf/xSWl1JldgYMQgg4dO4eiBgC5pWZ+vauQ5UcrkAgmjR/r2awuCWcbx0bc8yjlsFHp6REAikYjNgEXgxWo0Wh4+MERjWgWP7MP0MZHwF1wvVAtx3VoT2p8G5KiQB/CyZRfUYeUsD63gl9mFXH30OFotep+uzd18pOdAHI2biyXiNP1dK3OLB8A0O74OvMS0NefkNRJ6fOFlL8H6N8vmeioyEbt9gAG0PkY0M2ycrXcrWsXdAr0joSeEZBfDfkm1/byh/OlNWo5t7SOuXvs9E5M4sK5swACp30U8KWrIvcBgwCcTu4DdgZla4FUb++eFxQ3nAGU1PqQYjRWqOXOnTuqZY2APpHwcGeXMXz5hcIqC2U1tka08lobl3Q9GghOpxpYCIl6YRJCJkGQXkBIBrjLSX2a++lABvB15XTvfwBDeHizdr0Cd0XDg52gnZco8nD+La/ftUQ0nCWKItTV7RTOy+6ykKIPBGkAiVCnvXOnjs3aA+wArxEcgMXSED6GhfmIk3ElT4Z3gAExoK1fDsZaG2c9ln8jfSIbEg5SkuQu6xz6qx46dYOg44CGLdC+fbvmAgOsAF/NZg8DaDU+AgUPdDfAA51cQdXh/Erfl6WwRmdUrKqHdFR50F1eIKBUF9R7nF4X9D3DL8rKjeTmnVfrG7/eRtbO3Uh/V0Bc8cS9HSAhRus7naVttJpUa0RF4ZlVDskA6vR4uBgVmgCJtaZDOnj4KM+99Ao3CotUWmWViT+s+F9emv8auWfP4w+KgHnDY/jV/R3RegkwpPS+KTMzM62AO7lYCMEaQMitAANT+nvdq4EMUJ/lospk4nfLPuDNRUuoMjUkDzxD6gsXLzPvPxay8qPV6iXJF9KSI/jv0V2JaBpoWGs9a42yFELIcUg5Xwj5GASZFM3IyFBGjhrz7yMfuu/3nsq6UWaGY+VeOtYjSrFT9n+7WfP5OjXjCxAdFcm8l59nyD0D+WztBr7avA2brWHQvRLi+c0rc+md4P8x6qzRxoIdhZjqc3FKZSH6XcvdzZeyt61P8tU36KywlHI48L23tiobHPLyZCKdTvK+/45DW9Zxq6wxw73DhjB/7vO0b6eeURQWFfPByk/4/ofjKk2n0/Fvs54ibcpEvzfF3DIb83cWUmt1oBTmoj+4xjVAQdauret9pspCMUAkUIEXt251wp6G7UyVsYy8w/vIPbSXitKiRryxMdG8MOfnPDLyQV9y2Jq1i5UfrcZibUgyPPIvD7HgVy94Jj6aYf91Mwt3FyFObkNz3n354/3sbevn+eoT2PfUQwhhklKeAIZ60mvr6qiurqHg7A0KLp/n2rlcrl862yyhFxFhIH3qZJ6YPJ7wtj6Sgy45PD5hLANT+vPu0uVcqX8H2PPtfgoLi3kn4zWio6O89n2oexi/GBbHqpyGGyZSHvI7Lndh7MSpKU60X4Ds5otZ30bfVq/TqYntujqzOz/vEwZDONOmTCRtyiQMhubRni8UV9t5e28hedkb0F46qNJ7dO/G4kULievQ3ms/k6matJ/+AumwA0ip0XXJ+fqLEl9y1BUgpeZphEzxp5TVYsVqCZD7wpWcGHrPQFIfGcmDI+71G+U1hQS2XjDxwdFyamxOGDwFIuLQntwC0knB9RvMf/UNli15mw5egrLsPfvcgwchjvgbPHgYwCnFaiGcaeCKkYOBVqvFYAjHEB5ObEw0SYm96d8vmcEDU4iNCeoNtRHOl1tYfqSc06WNHxfsiQ8gDTHoDn0GTjvFJaW89sY7LFv8FhERhka827/J9qx+FkhmyG+DUspngE9C7ecPxjoHK48b+eaSyW9YrRSdR394DdTP8N0p/Vmy6A20Wte5fOjID7zx9mI3e43UO3rmbNzox0G37GHkc+BqQK4gUG118unJCp76qoDtF/0PHsDZJRnbfTOR9fN2+kwen/5tLQA2m40/f7Ra5RVSrgw0eAjBC6gfFsIqpVwAfBVqXzeMdQ42nK1kw9kq1z4PAY6u/ek5ciqF+1zi123YzIB+yVy6fJXComI3m0lxyKXBfK/Fz+NSys3A5FD6nC+3kJlXSc7VGuyBptsLFAGzBsXyzKBY3lu6nD3f7vfF+uvsbevvuAFigRNAvC8eh1NyosTMd9dqOVBQQ3F1y3/o6Bap4/WH40jp6PLCJlM1z744v1FWyQVxvKI4dsSxYx/6v0i4uVusESBdT2Q5QLjZLrlhsnGlwspFo4UL5VbOlVuo8ZcvDwIaRZDWL4pnB8fStklycWvWLpZ/8KEnqUqjEUPr85xBIeQzwBNCiMNSyp/k3bRseumbQo3N1ytmC5ESF8aC+zuQ2K55+FtZWcXOnL2eJAeSn4UyePiRBgAQQmz98sytFzSC4NZcEOgQrmH2Pe2YkBjp9T3hytV8/uvdpRQWecY44pfZ2zM3hyrrtv0j9Mcj5bN3XjGtrDA7WvzbTVQbhSdTYpjeL5owbXPVHA4HGzZt49O/rfW8Njuk5MWc7etXtkTmbf1J6k9HbvbNLbN+e7rUHNITT7u2GmYMiGZKchThXh4RpJQcOXqcv3zyV64V3PBsMiF5Onv7+pBn3o078pvc4gOl7x25UbegtMbud4ulxIUxOTmS1F4R6L2klSqrTHx34DCbt2SRf62gafMxjUbMCHXPN8UdMQDA704WG+wm5f1TJeafFlTZ1BtkR4OWUT0NjE+MVA83KSWm6mqMxgoKi0o4f/ESZ3LPcSbvHE5nMy9ShRSLYg0sr8/x/SiEZIBgX5LvEEzAR3YpluzdnlkckDtIhOQFBGKqhP/PwUsQB6V0rnPoHWv2btrk/SnoRyAkA0jkRmAOCL+PqS2ADahGUIoU+VI6zylCHFDszv07dnxVFLB3K1rRila0ohWtaEUL8A9MBwUfE4YIlwAAAABJRU5ErkJggg==">
+           </a>
+           <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarresponsive">
+               <span class="navbar-toggler-icon"></span>
+           </button>
+           <div class="collapse navbar-collapse" id="navbarresponsive">
+               <ul class="navbar-nav ml-auto">
+                   <li class="nav-item">
+                    <a href="SportsInfo.html" class="nav-link">Home</a>
+                   </li>
+                   <li class="dropdown text-white">
+                       <a href="" class="nav-link dropdown-toggle" role="button"data-toggle="dropdown">Sports</a>
+                       <div class="dropdown-menu bg-dark">
+                           <a href="swimmingdetails.html" class="dropdown-item">Swimming</a>
+                           <a href="sportsdetails1.html" class="dropdown-item">Cricket</a>
+                           <a href="golf.html" class="dropdown-item">Golf</a>
+                           <a href="volleyball.html" class="dropdown-item">Volley Ball</a>
+                           <a href="footballdetails.html" class="dropdown-item">Foot Ball</a>
+                           <a href="tennisdetails.html" class="dropdown-item">Tennis</a>
+                           <a href="judo.html" class="dropdown-item">Judo</a>
+                           <a href="Chess.html" class="dropdown-item">Chess</a>
+                           <a href="badminton.html" class="dropdown-item">Badminton</a>
+                           <a href="billiardsdetails.html" class="dropdown-item">Billards</a>
+                           <a href="motorcycledetails.html" class="dropdown-item">Motor Cycle Racing</a>
+                       </div>
+                   </li>
+                   <li class="nav-item">
+                       <a href="#about" class="nav-link">About Us</a>
+                   </li>
+                   <li class="nav-item">
+                       <a href="contactus.html" class="nav-link">Contact Us</a>
+                   </li>
+                   <!-- <li class="nav-item">
+                       <a href="" class="nav-link">Log in</a>
+                   </li> -->
+               </ul>
+           </div>
+        </nav>
+        <div>
+    <!-- header  -->
+
+    <div class="container-fluid text-center">
+        
+    </div>
+
+
+
+
+
+    <!-- content details  -->
+
+    <div class="container-fluid bgImage text-center">
+        <div class="container" style="background-color: transparent;">
+            <img src="data:image/png;base64,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">
+        </div>
+
+        
+
+        <div class="container my-4">
+            <p style="font-weight: 500;">Tennis is a racket sport that is played either individually against a single opponent or between two teams of two players each. Each player uses a tennis racket that is strung with cord to strike a hollow rubber ball covered with felt over or around a net and into the opponent's court.</p>
+        </div>
+
+        <!-- img start -->
+
+        <div class="container">
+            <img src="../js/images/tennisbanner.webp" class="mx-auto d-block" style="width:90%"> 
+        </div>
+       
+        <!-- img end  -->
+
+    </div>
+    <div class="container-fluid"><hr style="margin-top:-50px; height: 100px;"></div>
+
+    <div class="container my-4 mt-1 text-center" style="margin-top:-100px;">
+        <p style="font-weight:500 ;">Top Pla</p>
+    </div>
+
+    <!-- cards start  -->
+
+    <div class="container text-center  d-flex" id="cards">
+        <div class="container-fluid row">
+        <div class="card border-0 bg-transparent col-md-4" style="width:400px">
+            <a href="#" data-toggle="popover" title="Popover Header" data-content="Some content inside the popover"><img class="card-img-top" src="../js/images/saniamirza.webp" alt="Card image" style="width:100%"></a>
+          <div class="card-body">
+            <h4 class="card-title">Sania Mirza</h4>
+            <p class="card-text"></p>
+            <a href="#" class="btn btn-danger stretched-link">See Profile</a>
+          </div>
+        </div>
+
+        <h2></h2>
+        <p></p>
+        <div class="card border-0 bg-transparent col-md-4" style="width:400px">
+          <img class="card-img-top" src="../js/images/Rafael Nadal.jpg" alt="Card image" style="width:100%">
+          <div class="card-body">
+            <h4 class="card-title">Rafael Nadal</h4>
+            <p class="card-text"></p>
+            <a href="#" class="btn btn-danger stretched-link">See Profile</a>
+          </div>
+        </div>
+
+        <h2></h2>
+        <p></p>
+        <div class="card border-0 bg-transparent col-md-4" style="width:400px">
+          <img class="card-img-top" src="../js/images/Novak Djokovic.jpg" alt="Card image" style="width:85%">
+          <div class="card-body">
+            <h4 class="card-title">Novak Djokovic</h4>
+            <p class="card-text"></p>
+            <a href="#" class="btn btn-danger stretched-link">See Profile</a>
+          </div>
+        </div>
+        </div>
+    </div>
+
+    <!-- cards end -->
+
+    <div class="container-fluid"><hr style="margin-top:40px; height: 100px;"></div>
+
+    <!-- players section start  -->
+
+    <section class="about us">
+        <div class="container">
+            <h1 class="text-center" id="title1">Sania' Stats</h1>
+            <div class="row">   
+                <div class="col-md-6">
+                    <p class="para1" style="font-weight: 500;"> Sania Mirza is an Indian professional tennis player. A former doubles world No. 1, she has won six major titles – three in women's doubles and three in mixed doubles. From 2003 until her retirement from singles in 2013, she was ranked by the Women's Tennis Association as the Indian No. 1 in singles.</p>
+                    <ul>    
+                        <li>Mirza is one of only two Indian women to win a WTA Tour title, and the only one to be ranked within the top 100 in singles.</li>
+                        <li>Mirza has also won a total of 14 medals (including six golds) at three major multi-sport events, namely the Asian Games, the Commonwealth Games and the Afro-Asian Games</li>
+                        <li>In 2005, Mirza was crowned the WTA Newcomer of the Year, and in 2015 she and Martina Hingis were the doubles team of the year, going on to earn a 44-match winning streak, one of the longest in history.</li>                       
+                    </ul>
+
+                </div>
+
+                <div class="col-md-6">
+                    <img src="../js/images/saniastats.webp" class="img-fluid" alt="" width="300">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    
+
+
+    <section class="about us">
+        <div class="container">
+            <h1 class="text-center" id="title1">Novak's Stats</h1>
+            <div class="row">   
+                <div class="col-md-6">
+
+                    <p class="para1" style="font-weight: 500;">Novak Djokovic is a Serbian professional tennis player. He is currently ranked world No. 7 in singles by the Association of Tennis Professionals. He has been ranked world No. 1 for a record total 373 weeks, and has finished as the year-end No. 1 a record seven times. </p>
+                    <ul>    
+                        <li> </li>
+                        <li></li>
+                        <li></li>
+                 
+                    </ul>
+
+                </div>
+
+                <div class="col-md-6">
+                    <img src="../js/images/novakstats.jpg" class="img-fluid" alt="" width="500">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    
+
+
+    <section class="about us">
+        <div class="container">
+            <h1 class="text-center" id="title1">Rafael's Stats</h1>
+            <div class="row">   
+                <div class="col-md-6">
+                    <p class="para1" style="font-weight: 500;">Rafael Nadal Parera is a Spanish professional tennis player. He is currently ranked world No. 3 in singles by the Association of Tennis Professionals. He has been ranked world No. 1 for 209 weeks, and has finished as the year-end No. 1 five times</p>
+                    <ul>    
+                        <li> Nadal won the Torneo Conde de Godó in Barcelona and beat 2004 French Open runner-up Guillermo Coria in the finals of the 2005 Monte Carlo Masters and the 2005 Rome Masters. </li>
+                        <li>Three days after his victory in Paris, Nadal's 24-match winning streak was snapped in the first round of the grass court Gerry Weber Open in Halle, Germany, where he lost to Alexander Waske.</li>
+                        <li>Nadal started his North American summer hard-court season by defeating Agassi in the final of the 2005 Canada Masters, but lost in the first round of the 2005 Cincinnati Masters. 
+                        </li>
+                       
+                    </ul>
+
+                </div>
+
+                <div class="col-md-6">
+                    <img src="../js/images/rafaelstats.jpg" class="img-fluid" alt="" width="500">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- players section end  -->
+
+
+    <!-- cricket rules and regulations start -->
+
+
+    <!-- <div class="container my-4 mt-1 text-center">
+        <p>CRICKET IS WIDELY PLAYED IN MANY </p>
+    </div> -->
+
+    <section>
+        <div class="container">
+            <h1 id="title1" class="text-center">Rule and regulations</h1>
+            <div class="row">
+                <div class="col-md-6">
+                    <p>Players/teams cannot touch the net or posts or cross onto the opponent's side. Players/teams cannot carry the ball or catch it with the racquet. Players cannot hit the ball twice. Players must wait until the ball passes the net before they can return it.</p>
+                </div>  
+
+                <div class="col-md-6">
+                    <img src="../js/images/tennisrule.webp" class="img-fluid" alt="" width="500">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- cricket rules and regulations end -->
+
+    <!-- video start -->
+
+    <div class="container">
+        <video src="" class="mx-auto d-block"></video> 
+    </div>
+
+    <!-- video end -->
+    
+    
+
+
+    <div class="container-fluid"><hr style="margin-top:150px; height: 100px;"></div>
+
+
+    <!-- pagination  -->
+
+    <div class="container">
+        <ul class="pagination bg-transparent justify-content-center">
+            <li class="page-item"><a class="page-link" href="javascript:void(0);">Previous</a></li>
+            <li class="page-item"><a class="page-link" href="javascript:void(0);">1</a></li>
+            <li class="page-item"><a class="page-link" href="javascript:void(0);">2</a></li>
+            <li class="page-item"><a class="page-link" href="javascript:void(0);">Next</a></li>
+        </ul>
+    </div>
+
+    <!-- icons -->
+    <div class="container footer bg-transparent">
+
+       <div class="container text-center">
+         <a href="#" class="fa fa-facebook"></a>
+         <a href="#" class="fa fa-twitter"></a>
+         <a href="#" class="fa fa-google"></a>
+       </div>
+    </div>
+    <!-- Footer -->
+<div class="Container-fluid text-white" id="footer">
+    
+    <div class="row" id="footer-row">
+        <div class="col-md-4 col-sm-12 logo mt-3 mb-2 text-center">
+           <a href=""><img src="data:image/png;base64,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"></a>
+           <h1>Sports.Info</h1>
+           <h6>Information you need <br>Knowledge we have</h6>
+        </div>
+        <div class="col-md-2 col-sm-6 mb-2 mt-3 ml-3" id="visit">
+            <h3>Visit</h3>
+            <a href="#Home"><h5>Home</h5></a>
+            <a href="#Content"><h5>Sports</h5></a>
+            <a href="#about"><h5>About Us</h5></a>
+            <a href="contactus.html"><h5>ContactUs</h5></a>
+        </div>
+        <div class="col-md-2 col-sm-6 mb-2 mt-3 ml-3">
+            <h3>Follow Us</h3>
+            <h5>Facebook</h5>
+            <h5>Twitter</h5>
+            <h5>Youtube</h5>
+
+        </div>
+        <div class="col-md-3 col-sm-6 mb-2 mt-3 ml-3">
+            <h3>Contact</h3>
+            <h5>+923 123456789</h5>
+            <h3>Address</h3>
+            <h5>Karachi Pakistan</h5>
+            <h3>Mail Address</h3>
+            <h5>abc@gmail.com</h5>
+        </div>
+    </div>
+
+</div>
+<div class="Container-fluid text-center text-white" id="copyright">
+<div class="container" id="cpyrght">
+    <div class="row">
+        <div class="col-md-12 col-sm-12">
+            <h5>&copy; CopyRight Reserved 2022</h5>
+        </div>
+    </div>
+</div>
+</div>
+<!-- Footer -->
+
+  
+</body>
+</html>

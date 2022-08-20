@@ -1,0 +1,222 @@
+@import url('https://fonts.googleapis.com/css2?family=Cabin:ital,wght@0,400;0,500;0,700;1,400;1,500;1,600;1,700&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Ubuntu:wght@300;400;500;700&display=swap');
+body{
+    font-family:'Poppins', sans-serif;
+    overflow-x: hidden;
+}
+.bg-image{
+    background: linear-gradient(rgba(74, 72, 72, 0.5),black), url(../Img/baner.jpg);
+    height: 100vh;
+    background-size: 100% 100%;
+}
+
+/* Navbar */
+.navbar{
+    text-transform: uppercase;
+    font-weight: 700;
+    font-size: .9rem;
+    letter-spacing: .1rem;
+    background: rgba(0, 0, 0, 0.6)!important;
+}
+#logo{
+    
+    font-size: 10px;
+}
+
+.navbar-nav li{
+    padding-right: .7rem;
+}
+.navbar-dark .navbar-nav .nav-link{
+    color: white;
+    transition: 0.5s ;
+     
+}
+.navbar-dark .navbar-nav .nav-link.active,.navbar-dark .navbar-nav .nav-link:hover{
+    color: red;
+    border-bottom: 1.5px solid red;
+}
+/* Searchbar */
+#Searchbox{
+    padding-top: 140px;
+    justify-content: center;
+    display: flex;
+}
+.searchbar{
+    width: 50%;
+    position: relative;
+}
+.searchbar input[type="text"]{
+    width: 100%;
+    padding: 10px;
+    padding-right: 60px;
+    box-sizing: border-box;
+    background: rgba(0, 0, 0, 0.3);
+    border: 2px solid white;
+    border-radius: 10px;
+    font-size: 18px;
+    color: #fff;
+    outline: none;
+}
+::-webkit-input-placeholder{
+    color: #fff;
+}
+.fa-search{
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    right: 25px;
+    color: #fff;
+    font-size: 25px;
+    transition: 0.5s all;
+}
+/* Search Bar */
+
+/* dropdown start */
+.dropdown-menu{
+    background: rgba(0, 0, 0, 0.6)!important;
+    
+}
+.dropdown-menu a{
+    color: white;
+    font-weight: bold;
+    transition: o.3s all;
+}
+.dropdown-menu a:hover{
+    color: red;
+    border-bottom: 1.5px solid red;
+
+}
+/* dropdown end */
+
+.headerSet{
+	padding-top: 100px;
+    
+    align-content: center;
+    box-sizing: border-box;
+    justify-content: center;
+}
+.heading1{
+font-size: 62px;
+}
+#text{
+    text-align: justify;
+}
+
+p{
+    text-align: justify;
+}
+.head1{
+    align-items: center;
+    text-align: center;
+}
+
+.nav li{
+text-align: center;
+padding: 10px;
+
+}
+.nav li a{
+    text-decoration: none;
+    transition: 0.5s all;
+}
+.nav li a:hover{
+    color: red;
+    border-bottom: 1px red solid;
+}
+/* Content Start */
+#MiniInfo{
+    overflow: hidden;
+    align-items: center;
+    background: #fff;
+    border-radius: 5px;
+    box-shadow: 0 0 3px 0 #00000073;
+    transition: 0.3s all;
+    cursor: pointer;
+}
+#MiniInfo:hover{
+    transform: translateY(-6px);
+    box-shadow: 0 11px 14px rgba(0, 0, 0, 25%),0 8px 20px rgba(0, 0, 0, 10%);
+}
+#Cimg{
+    height: 350px;
+    pad: 10px;
+    width: 100%;
+}
+#RMbtn{
+    height: 40px;
+    width: 100px;
+    border-radius: 5px;
+    background-color: red;
+    
+}
+#RMbtn a{
+    text-decoration: none;
+    font-size: 13px;
+    color: white;
+}
+/* Content End */
+
+/* About Us */
+#about{
+    background: #101010;
+    
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+#abtimg{
+    height: 550px;
+}
+#abttext{
+    color: white;
+}
+#abttext H1{
+    font-size: 65px;
+    color: red;
+    font-weight: bold;
+}
+#abttext a:hover{
+    background-color: red;
+    color: white;
+}
+.imgs{
+    float: right;
+    font-size: 30px;
+    
+}
+.imgs a{
+    text-decoration: none;
+    color: white;
+    padding: 7px;
+    transition: 0.7s;
+}
+.imgs a:hover{
+    color: red;
+    border-bottom: 1px solid red;
+    border-top: 1px solid red;
+}
+/* footer */
+#footer{
+    background-color: #101010;
+    
+}
+
+#copyright{
+    background-color: #101010;
+}
+#cpyrght{
+    border-top: 1px solid white;
+}
+.Container-fluid .row .col-md-2 a{
+    text-decoration: none;
+    color: white;  
+    font-size: 20px;
+    transition: 1s all;  
+}
+.Container-fluid .row .col-md-4 a{
+    text-decoration: none;
+}
+.Container-fluid .row .col-md-2 a:hover{
+    color: red;
+    border-bottom: 1px solid red;
+}
+/* footer */
